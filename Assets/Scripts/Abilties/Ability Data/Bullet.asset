@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04d6f1a846cb014bbfb607783607997, type: 3}
+  m_Name: Bullet
+  m_EditorClassIdentifier: 
+  maxLevel: 8
+  baseStats:
+    nameText: Bullet
+    descriptionText: Fires Random Bullets
+    moveSpeed: 7
+    cooldown: 10
+    damage: 6
+    damageVariance: 2
+    lifeSpan: 8
+    projectileInterval: 0
+    isPassive: 0
+  LevelUpStats:
+  - nameText: Bullet Level 2
+    descriptionText: +Damage and shorter Cooldown
+    moveSpeed: 0
+    cooldown: -0.5
+    damage: 2
+    damageVariance: 2
+    lifeSpan: 0
+    projectileInterval: 0
+    isPassive: 0
+  - nameText: Bullet Level 3
+    descriptionText: +Damage and shorter Cooldown
+    moveSpeed: 0
+    cooldown: -0.5
+    damage: 2
+    damageVariance: 2
+    lifeSpan: 0
+    projectileInterval: 0
+    isPassive: 0
+  - nameText: Bullet Level 4
+    descriptionText: +Damage and shorter Cooldown
+    moveSpeed: 0
+    cooldown: -0.5
+    damage: 2
+    damageVariance: 2
+    lifeSpan: 0
+    projectileInterval: 0
+    isPassive: 0
+  - nameText: Bullet Level 5
+    descriptionText: +Damage and shorter Cooldown
+    moveSpeed: 0
+    cooldown: -0.5
+    damage: 2
+    damageVariance: 2
+    lifeSpan: 0
+    projectileInterval: 0
+    isPassive: 0
+  - nameText: Bullet Level 6
+    descriptionText: +Damage and shorter Cooldown
+    moveSpeed: 0
+    cooldown: -0.5
+    damage: 2
+    damageVariance: 2
+    lifeSpan: 0
+    projectileInterval: 0
+    isPassive: 0
+  - nameText: Bullet Level 7
+    descriptionText: +Damage and shorter Cooldown
+    moveSpeed: 0
+    cooldown: -0.5
+    damage: 2
+    damageVariance: 2
+    lifeSpan: 0
+    projectileInterval: 0
+    isPassive: 0
+  - nameText: Bullet Level 8
+    descriptionText: +Damage and shorter Cooldown
+    moveSpeed: 0
+    cooldown: -0.5
+    damage: 2
+    damageVariance: 2
+    lifeSpan: 0
+    projectileInterval: 0
+    isPassive: 0
