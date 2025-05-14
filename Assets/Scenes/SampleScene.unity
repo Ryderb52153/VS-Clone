@@ -1318,7 +1318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fa4309cadc5d6428913780b060bb9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCooldown: 10
+  spawnCooldown: 5
 --- !u!4 &985484039
 Transform:
   m_ObjectHideFlags: 0

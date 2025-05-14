@@ -6,6 +6,8 @@ public class EnemySpawner : MonoBehaviour
 
     private float cooldownRemaining;
 
+    private float[] spawnXVectorRange = { -.5f, -.25f, .25f, .5f, 1f };
+
     private void Start()
     {
         GameManager.Instance.endGameDelegate = SpawnEndGame;
@@ -17,7 +19,10 @@ public class EnemySpawner : MonoBehaviour
 
         if (cooldownRemaining < 0)
         {
-            SpawnEnemy();
+            int randomXNum = Random.Range(0, spawnXVectorRange.Length);
+            int randomYVector = Random.Range(0, 1);
+
+            SpawnEnemy(spawnXVectorRange[randomXNum], randomYVector);
             cooldownRemaining = spawnCooldown;
         }
     }
@@ -28,16 +33,10 @@ public class EnemySpawner : MonoBehaviour
         GameObject playerKiller = ObjectPooler.Instance.SpawnFromPool("End Game Boss", new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
     }
 
-    // update to spawn in random positions
-    // need to come up with an idea for random intervals 
-    // of group spawns and single spawns.
-    private void SpawnEnemy()
+    private void SpawnEnemy(float randomVectorX, int randomVectorY)
     {
-        Vector3 spawnPos = Camera.main.ViewportToWorldPoint(new Vector3(.5f, 1));
+        Vector3 spawnPos = Camera.main.ViewportToWorldPoint(new Vector3(randomVectorX, randomVectorY));
         GameObject enemy = ObjectPooler.Instance.SpawnFromPool("Enemy Triangle", new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
-
-        Vector3 spawnPos2 = Camera.main.ViewportToWorldPoint(new Vector3(.5f, 0));
-        GameObject enemy2 = ObjectPooler.Instance.SpawnFromPool("Enemy Triangle", new Vector3(spawnPos2.x, spawnPos2.y, 0), Quaternion.identity);
     }
 
     private void OnEnable()
