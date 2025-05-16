@@ -116,9 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c40a36df4680fe44b1031ae9c6e6197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 1
+  enemyHealth: 5
   enemyDamage: 1
-  enemySpeed: 2
+  enemySpeed: 3
 --- !u!60 &5459223357974142984
 PolygonCollider2D:
   m_ObjectHideFlags: 0

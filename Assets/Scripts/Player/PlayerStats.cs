@@ -15,8 +15,10 @@ public class PlayerStats : MonoBehaviour
     public int Damage {  get => damage; }
     public int CurrentEXP { get => currentEXP; }
     public int MoveSpeed {  get => moveSpeed; }
+    public int MaxHealth { get => maxHealth; }
 
     public event Action<int> ExpUpdate;
+    public event Action<int> HealthUpdate;
     public event Action LevelUp;
 
     private void Start()
@@ -34,6 +36,8 @@ public class PlayerStats : MonoBehaviour
         else if (currentHealth < 0)
             currentHealth = 0;
 
+        HealthUpdate?.Invoke(-damage);
+
         CheckDeath();
     }
 
@@ -48,6 +52,7 @@ public class PlayerStats : MonoBehaviour
     {
         maxHealth += healthToAdd;
         currentHealth += healthToAdd;
+        HealthUpdate?.Invoke(healthToAdd);
     }
 
     private void CheckLevelUp()

@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 99999999
   enemyDamage: 999
-  enemySpeed: 5
+  enemySpeed: 6
 --- !u!60 &2394601169572407979
 PolygonCollider2D:
   m_ObjectHideFlags: 0
