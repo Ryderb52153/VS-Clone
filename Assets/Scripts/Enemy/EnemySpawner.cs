@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
         GameManager.Instance.endGameDelegate = SpawnEndGame;
     }
 
-    private void Tick(object sender, TimeTickSystem.OnTickEventArgs e)
+    private void TimeTick(object sender, TimeTickSystem.OnTickEventArgs e)
     {
         cooldownRemaining--;
 
@@ -37,15 +37,16 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector3 spawnPos = Camera.main.ViewportToWorldPoint(new Vector3(randomVectorX, randomVectorY));
         GameObject enemy = ObjectPooler.Instance.SpawnFromPool("Enemy Triangle", new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
+        GameManager.Instance.ActiveEnemies.Add(enemy);
     }
 
     private void OnEnable()
     {
-        TimeTickSystem.OnTick += Tick;
+        TimeTickSystem.OnTick += TimeTick;
     }
 
     private void OnDisable()
     {
-        TimeTickSystem.OnTick -= Tick;
+        TimeTickSystem.OnTick -= TimeTick;
     }
 }

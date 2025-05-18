@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,9 +13,13 @@ public class GameManager : MonoBehaviour
     public EndGameDelegate endGameDelegate;
     public GameOverDelegate gameOverDelegate;
 
+    public List<GameObject> ActiveEnemies { get;  set; }
+
     private void Awake()
     {
         UnpauseGame();
+
+        ActiveEnemies = new List<GameObject>();
 
         if (Instance == null)
             Instance = this;

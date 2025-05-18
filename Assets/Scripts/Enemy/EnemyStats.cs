@@ -24,12 +24,13 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
         if (currentEnemyHealth <= 0)
         {
             gameObject.SetActive(false);
+            GameManager.Instance.ActiveEnemies.Remove(this.gameObject);
             currentEnemyHealth = enemyHealth;
             ObjectPooler.Instance.SpawnFromPool("Experience", transform.position, transform.rotation);
         }
         else
         {
-            print("Health Remaining : " + currentEnemyHealth);
+            //print("Health Remaining : " + currentEnemyHealth);
         }
     }
 }

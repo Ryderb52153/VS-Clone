@@ -10,6 +10,8 @@ public class ObjectPooler : MonoBehaviour
 
     public static ObjectPooler Instance;
 
+    
+
     private void Awake()
     {
         if (Instance == null)
