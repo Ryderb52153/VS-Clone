@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     private float cooldownRemaining;
 
     private float[] spawnXVectorRange = { -.5f, -.25f, .25f, .5f, 1f };
+    private string[] enemies = { "Enemy Triangle", "Enemy Purple" };
 
     private void Start()
     {
@@ -21,8 +22,9 @@ public class EnemySpawner : MonoBehaviour
         {
             int randomXNum = Random.Range(0, spawnXVectorRange.Length);
             int randomYVector = Random.Range(0, 1);
+            int randomEnemy = Random.Range(0, enemies.Length);
 
-            SpawnEnemy(spawnXVectorRange[randomXNum], randomYVector);
+            SpawnEnemy(spawnXVectorRange[randomXNum], randomYVector, randomEnemy);
             cooldownRemaining = spawnCooldown;
         }
     }
@@ -33,10 +35,10 @@ public class EnemySpawner : MonoBehaviour
         GameObject playerKiller = ObjectPooler.Instance.SpawnFromPool("End Game Boss", new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
     }
 
-    private void SpawnEnemy(float randomVectorX, int randomVectorY)
+    private void SpawnEnemy(float randomVectorX, int randomVectorY, int enemyType)
     {
         Vector3 spawnPos = Camera.main.ViewportToWorldPoint(new Vector3(randomVectorX, randomVectorY));
-        GameObject enemy = ObjectPooler.Instance.SpawnFromPool("Enemy Triangle", new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
+        GameObject enemy = ObjectPooler.Instance.SpawnFromPool(enemies[enemyType], new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
         GameManager.Instance.ActiveEnemies.Add(enemy);
     }
 

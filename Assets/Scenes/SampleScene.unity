@@ -3273,6 +3273,9 @@ MonoBehaviour:
   - tag: End Game Boss
     prefab: {fileID: 3730660627247058147, guid: 6156e920b22a877408c2037cf3d09824, type: 3}
     size: 1
+  - tag: Enemy Purple
+    prefab: {fileID: 8577565923081341760, guid: c4d3eca2fc05b4440a3eb969700e7ef9, type: 3}
+    size: 50
 --- !u!4 &1864801926
 Transform:
   m_ObjectHideFlags: 0
