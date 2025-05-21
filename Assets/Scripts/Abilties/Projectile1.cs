@@ -10,13 +10,10 @@ public class Projectile1 : Ability
         GameObject gameObject = ObjectPooler.Instance.SpawnFromPool("Projectile 1", transform.position, transform.rotation);
         SquareProjectileBehaviour square = gameObject.GetComponent<SquareProjectileBehaviour>();
 
-        // Random Direction
-        int randomY = Random.Range(-1, 2);
-        int randomX = Random.Range(-1, 2);
-        Vector3 direction = new Vector3(randomX, randomY, 0);
-
-        if (direction.y == 0 && direction.x == 0)
-            direction.y = -1;
+        // Shoot in direction of Mouse Position
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPos.z = 0;
+        Vector3 direction = (mouseWorldPos - transform.position).normalized;
 
         // Set Projectile details
         square.SetSpeed = currentStats.moveSpeed;

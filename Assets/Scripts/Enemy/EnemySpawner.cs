@@ -17,29 +17,32 @@ public class EnemySpawner : MonoBehaviour
     private void TimeTick(object sender, TimeTickSystem.OnTickEventArgs e)
     {
         cooldownRemaining--;
+        if (cooldownRemaining >= 0) { return; }
 
-        if (cooldownRemaining < 0)
-        {
-            int randomXNum = Random.Range(0, spawnXVectorRange.Length);
-            int randomYVector = Random.Range(0, 1);
-            int randomEnemy = Random.Range(0, enemies.Length);
-
-            SpawnEnemy(spawnXVectorRange[randomXNum], randomYVector, randomEnemy);
-            cooldownRemaining = spawnCooldown;
-        }
+        SpawnEnemy();
+        cooldownRemaining = spawnCooldown;
     }
 
-    public void SpawnEndGame()
+    private void SpawnEndGame()
     {
         Vector3 spawnPos = Camera.main.ViewportToWorldPoint(new Vector3(.5f, 1));
         GameObject playerKiller = ObjectPooler.Instance.SpawnFromPool("End Game Boss", new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
     }
 
-    private void SpawnEnemy(float randomVectorX, int randomVectorY, int enemyType)
+    private void SpawnEnemy()
     {
-        Vector3 spawnPos = Camera.main.ViewportToWorldPoint(new Vector3(randomVectorX, randomVectorY));
-        GameObject enemy = ObjectPooler.Instance.SpawnFromPool(enemies[enemyType], new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
+        Vector3 spawnPos = GetRandomPosition();
+        int randomEnemy = Random.Range(0, enemies.Length);
+        GameObject enemy = ObjectPooler.Instance.SpawnFromPool(enemies[randomEnemy], new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
         GameManager.Instance.ActiveEnemies.Add(enemy);
+    }
+
+    private Vector3 GetRandomPosition()
+    {
+        int randomXVector = Random.Range(0, spawnXVectorRange.Length);
+        int randomYVector = Random.Range(0, 1);
+        Vector3 spawnPos = Camera.main.ViewportToWorldPoint(new Vector3(spawnXVectorRange[randomXVector], randomYVector));
+        return spawnPos;
     }
 
     private void OnEnable()

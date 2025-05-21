@@ -35,7 +35,7 @@ MonoBehaviour:
     isPassive: 0
   - nameText: Bullet Level 3
     descriptionText: +Damage and shorter Cooldown
-    moveSpeed: 0
+    moveSpeed: 1
     cooldown: -0.5
     damage: 2
     damageVariance: 2
@@ -44,7 +44,7 @@ MonoBehaviour:
     isPassive: 0
   - nameText: Bullet Level 4
     descriptionText: +Damage and shorter Cooldown
-    moveSpeed: 0
+    moveSpeed: 1
     cooldown: -0.5
     damage: 2
     damageVariance: 2
@@ -57,33 +57,33 @@ MonoBehaviour:
     cooldown: -0.5
     damage: 2
     damageVariance: 2
-    lifeSpan: 0
+    lifeSpan: 1
     projectileInterval: 0
     isPassive: 0
   - nameText: Bullet Level 6
     descriptionText: +Damage and shorter Cooldown
-    moveSpeed: 0
+    moveSpeed: 2
     cooldown: -0.5
     damage: 2
     damageVariance: 2
-    lifeSpan: 0
+    lifeSpan: 1
     projectileInterval: 0
     isPassive: 0
   - nameText: Bullet Level 7
     descriptionText: +Damage and shorter Cooldown
-    moveSpeed: 0
+    moveSpeed: 1
     cooldown: -0.5
     damage: 2
     damageVariance: 2
-    lifeSpan: 0
+    lifeSpan: 1
     projectileInterval: 0
     isPassive: 0
   - nameText: Bullet Level 8
     descriptionText: +Damage and shorter Cooldown
-    moveSpeed: 0
+    moveSpeed: 1
     cooldown: -0.5
     damage: 2
     damageVariance: 2
-    lifeSpan: 0
+    lifeSpan: 1
     projectileInterval: 0
     isPassive: 0
