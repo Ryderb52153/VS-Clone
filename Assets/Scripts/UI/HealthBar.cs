@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Slider healthBar = null;
+    [SerializeField] private TextMeshProUGUI healthAmountText = null;
 
     PlayerStats playerStats;
 
@@ -23,6 +25,7 @@ public class HealthBar : MonoBehaviour
     {
         float healthPercent = (float)currentHealth / maxHealth;
         healthBar.value = healthPercent;
+        healthAmountText.text = currentHealth + "/" + maxHealth;
     }
 
     private void OnEnable()
