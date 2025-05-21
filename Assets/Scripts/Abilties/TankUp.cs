@@ -5,10 +5,8 @@ public class TankUp : Ability
     protected override void ActivatePassive()
     {
         base.ActivatePassive();
-
         PlayerStats playerStats = GameManager.Instance.Player.Stats;
-
-        playerStats.AddMaxHealth(10);
+        playerStats.AddMaxHealth(currentStats.healingAmount);
     }
 
     protected override void DeactivatePassive()
@@ -16,6 +14,6 @@ public class TankUp : Ability
         base.DeactivatePassive();
 
         PlayerStats playerStats = GameManager.Instance.Player.Stats;
-        playerStats.AddMaxHealth(-10);
+        playerStats.AddMaxHealth(-currentStats.healingAmount);
     }
 }

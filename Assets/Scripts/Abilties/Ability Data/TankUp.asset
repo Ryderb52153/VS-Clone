@@ -22,68 +22,76 @@ MonoBehaviour:
     damageVariance: 0
     lifeSpan: 0
     projectileInterval: 0
+    healingAmount: 30
     isPassive: 1
   LevelUpStats:
-  - nameText: Level 2
-    descriptionText: Upgrade 2
+  - nameText: Tank Up Level 2
+    descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
     damage: 0
     damageVariance: 0
     lifeSpan: 0
     projectileInterval: 0
-    isPassive: 0
-  - nameText: Level 3
-    descriptionText: Upgrade 3
+    healingAmount: 0
+    isPassive: 1
+  - nameText: Tank Up Level 3
+    descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
     damage: 0
     damageVariance: 0
     lifeSpan: 0
     projectileInterval: 0
-    isPassive: 0
-  - nameText: Level 4
-    descriptionText: Upgrade 4
+    healingAmount: 0
+    isPassive: 1
+  - nameText: Tank Up Level 4
+    descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
     damage: 0
     damageVariance: 0
     lifeSpan: 0
     projectileInterval: 0
-    isPassive: 0
-  - nameText: Level 5
-    descriptionText: Upgrade 5
+    healingAmount: 0
+    isPassive: 1
+  - nameText: Tank Up Level 5
+    descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
     damage: 0
     damageVariance: 0
     lifeSpan: 0
     projectileInterval: 0
-    isPassive: 0
-  - nameText: Level 6
-    descriptionText: Upgrade 6
+    healingAmount: 0
+    isPassive: 1
+  - nameText: Tank Up Level 6
+    descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
     damage: 0
     damageVariance: 0
     lifeSpan: 0
     projectileInterval: 0
-    isPassive: 0
-  - nameText: Level 7
-    descriptionText: Upgrade 7
+    healingAmount: 0
+    isPassive: 1
+  - nameText: Tank Up Level 7
+    descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
     damage: 0
     damageVariance: 0
     lifeSpan: 0
     projectileInterval: 0
-    isPassive: 0
-  - nameText: Level 8
-    descriptionText: Upgrade 8
+    healingAmount: 0
+    isPassive: 1
+  - nameText: Tank Up Final
+    descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
     damage: 0
     damageVariance: 0
     lifeSpan: 0
     projectileInterval: 0
-    isPassive: 0
+    healingAmount: 0
+    isPassive: 1

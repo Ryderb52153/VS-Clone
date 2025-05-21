@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
     public int MaxHealth { get => maxHealth; }
 
     public event Action<int> ExpUpdate;
-    public event Action<int> HealthUpdate;
+    public event Action<int, int> HealthUpdate;
     public event Action LevelUp;
 
     private void Start()
@@ -36,7 +36,7 @@ public class PlayerStats : MonoBehaviour
         else if (currentHealth < 0)
             currentHealth = 0;
 
-        HealthUpdate?.Invoke(-damage);
+        HealthUpdate?.Invoke(maxHealth,currentHealth);
 
         CheckDeath();
     }
@@ -52,7 +52,7 @@ public class PlayerStats : MonoBehaviour
     {
         maxHealth += healthToAdd;
         currentHealth += healthToAdd;
-        HealthUpdate?.Invoke(healthToAdd);
+        HealthUpdate?.Invoke(maxHealth, currentHealth);
     }
 
     private void CheckLevelUp()
@@ -67,7 +67,6 @@ public class PlayerStats : MonoBehaviour
     {
         if (currentHealth != 0) { return; }
 
-        print("End Game, Character dead");
         isDead = true;
         GameManager.Instance.TriggerGameOver();
     }

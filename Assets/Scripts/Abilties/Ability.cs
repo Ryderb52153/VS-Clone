@@ -38,6 +38,9 @@ public abstract class Ability : MonoBehaviour
 
         currentStats += AbilityData.GetLevelData(++currentLevel);
         nextLevelStats += AbilityData.GetLevelData(currentLevel + 1);
+
+        if(currentStats.isPassive)
+            ActivatePassive();
     }
 
     public virtual bool CanLevelUP()

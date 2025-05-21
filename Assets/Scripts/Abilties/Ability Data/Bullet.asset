@@ -22,68 +22,76 @@ MonoBehaviour:
     damageVariance: 2
     lifeSpan: 8
     projectileInterval: 0
+    healingAmount: 0
     isPassive: 0
   LevelUpStats:
   - nameText: Bullet Level 2
-    descriptionText: +Damage and shorter Cooldown
+    descriptionText: +Damage and -Cooldown
     moveSpeed: 0
     cooldown: -0.5
     damage: 2
     damageVariance: 2
     lifeSpan: 0
     projectileInterval: 0
+    healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 3
-    descriptionText: +Damage and shorter Cooldown
+    descriptionText: +Damage and -Cooldown
     moveSpeed: 1
     cooldown: -0.5
     damage: 2
     damageVariance: 2
     lifeSpan: 0
     projectileInterval: 0
+    healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 4
-    descriptionText: +Damage and shorter Cooldown
+    descriptionText: +Damage and -Cooldown
     moveSpeed: 1
     cooldown: -0.5
     damage: 2
     damageVariance: 2
     lifeSpan: 0
     projectileInterval: 0
+    healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 5
-    descriptionText: +Damage and shorter Cooldown
+    descriptionText: +Damage and -Cooldown
     moveSpeed: 0
     cooldown: -0.5
     damage: 2
     damageVariance: 2
     lifeSpan: 1
     projectileInterval: 0
+    healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 6
-    descriptionText: +Damage and shorter Cooldown
+    descriptionText: +Damage and -Cooldown
     moveSpeed: 2
     cooldown: -0.5
     damage: 2
     damageVariance: 2
     lifeSpan: 1
     projectileInterval: 0
+    healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 7
-    descriptionText: +Damage and shorter Cooldown
+    descriptionText: +Damage and -Cooldown
     moveSpeed: 1
     cooldown: -0.5
     damage: 2
     damageVariance: 2
     lifeSpan: 1
     projectileInterval: 0
+    healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 8
-    descriptionText: +Damage and shorter Cooldown
+    descriptionText: +Damage and -Cooldown
     moveSpeed: 1
     cooldown: -0.5
     damage: 2
     damageVariance: 2
     lifeSpan: 1
     projectileInterval: 0
+    healingAmount: 0
     isPassive: 0

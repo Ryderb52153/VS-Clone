@@ -19,9 +19,10 @@ public class HealthBar : MonoBehaviour
         healthBar.value = maxHealth;
     }
 
-    private void HealthUpdate(int amount)
+    private void HealthUpdate(int maxHealth, int currentHealth)
     {
-        healthBar.value += amount * .01f;
+        float healthPercent = (float)currentHealth / maxHealth;
+        healthBar.value = healthPercent;
     }
 
     private void OnEnable()
