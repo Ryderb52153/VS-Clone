@@ -6,6 +6,7 @@ public class UpgradePanel : MonoBehaviour
 {
     [SerializeField] private GameObject upgradePanel = null;
     [SerializeField] private Button[] upgradeButtons = null;
+    [SerializeField] private AbilityRanksUI abilityRanksUI = null;
     [SerializeField] private TextMeshProUGUI[] buttonNameText;
     [SerializeField] private TextMeshProUGUI[] buttonTexts = null;
 
@@ -33,19 +34,41 @@ public class UpgradePanel : MonoBehaviour
         {
             if (randomAbilities[i].IsActive)
             {
-                upgradeButtons[i].onClick.AddListener(randomAbilities[i].LevelUpAbililty);
-                buttonTexts[i].text = randomAbilities[i].GetNextLevelDescriptionText;
-                buttonNameText[i].text = randomAbilities[i].GetNextLevelNameText;
+                SetButtonForAbilityLevelUp(randomAbilities, i);
+
+                string nametest = randomAbilities[i].name;
+                int levelTest = randomAbilities[i].GetCurrentLevel + 1;
+
+                upgradeButtons[i].onClick.AddListener(
+                    () => abilityRanksUI.SetNewRank(nametest, levelTest));
             }
             else
             {
-                upgradeButtons[i].onClick.AddListener(randomAbilities[i].ActivateAbility);
-                buttonTexts[i].text = randomAbilities[i].GetNextLevelDescriptionText;
-                buttonNameText[i].text = randomAbilities[i].GetNextLevelNameText;
+                SetButtonForAbilityActivate(randomAbilities, i);
+
+                string nametest = randomAbilities[i].name;
+                int levelTest = randomAbilities[i].GetCurrentLevel + 1;
+
+                upgradeButtons[i].onClick.AddListener(
+                    () => abilityRanksUI.SetExistingRank(nametest, levelTest));
             }
-                
+
             upgradeButtons[i].onClick.AddListener(ButtonPressed);
         }
+    }
+
+    private void SetButtonForAbilityActivate(Ability[] randomAbilities, int i)
+    {
+        upgradeButtons[i].onClick.AddListener(randomAbilities[i].ActivateAbility);
+        buttonTexts[i].text = randomAbilities[i].GetNextLevelDescriptionText;
+        buttonNameText[i].text = randomAbilities[i].GetNextLevelNameText;
+    }
+
+    private void SetButtonForAbilityLevelUp(Ability[] randomAbilities, int i)
+    {
+        upgradeButtons[i].onClick.AddListener(randomAbilities[i].LevelUpAbililty);
+        buttonTexts[i].text = randomAbilities[i].GetNextLevelDescriptionText;
+        buttonNameText[i].text = randomAbilities[i].GetNextLevelNameText;
     }
 
     private void ButtonPressed()
