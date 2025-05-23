@@ -35,23 +35,19 @@ public class UpgradePanel : MonoBehaviour
             if (randomAbilities[i].IsActive)
             {
                 SetButtonForAbilityLevelUp(randomAbilities, i);
-
-                string nametest = randomAbilities[i].name;
-                int levelTest = randomAbilities[i].GetCurrentLevel + 1;
-
-                upgradeButtons[i].onClick.AddListener(
-                    () => abilityRanksUI.SetNewRank(nametest, levelTest));
             }
             else
             {
                 SetButtonForAbilityActivate(randomAbilities, i);
-
-                string nametest = randomAbilities[i].name;
-                int levelTest = randomAbilities[i].GetCurrentLevel + 1;
-
-                upgradeButtons[i].onClick.AddListener(
-                    () => abilityRanksUI.SetExistingRank(nametest, levelTest));
             }
+
+            // Ability Ranks UI 
+            int numb = i;
+
+            upgradeButtons[i].onClick.AddListener(
+                () => abilityRanksUI.SetNewRank(randomAbilities[numb]));
+
+            // Ability Ranks UI 
 
             upgradeButtons[i].onClick.AddListener(ButtonPressed);
         }

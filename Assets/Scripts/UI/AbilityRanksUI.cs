@@ -1,19 +1,16 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AbilityRanksUI : MonoBehaviour
 {
     [SerializeField] private Image[] rankImages = null;
+    [SerializeField] private TextMeshProUGUI[] rankTexts = null;
 
     
 
-    public void SetNewRank(string abilityName, int currentLevel)
+    public void SetNewRank(Ability ability)
     {
-        print(abilityName + " is new rank : " + currentLevel);
-    }
-
-    public void SetExistingRank(string abilityName, int currentLevel)
-    {
-        print(abilityName + " is new rank : " + currentLevel);
+        print(ability.GetNextLevelNameText + " is new rank : " + ability.GetCurrentLevel);
     }
 }
