@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04d6f1a846cb014bbfb607783607997, type: 3}
   m_Name: DefenseBall
   m_EditorClassIdentifier: 
+  abilitySprite: {fileID: -1982499344582890396, guid: 6db6c7dff6381d74b98ef52ceecda794, type: 3}
   maxLevel: 8
   baseStats:
     nameText: Defense Ball

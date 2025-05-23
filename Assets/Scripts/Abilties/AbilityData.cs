@@ -4,12 +4,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AbilityData", menuName = "Scriptable Objects/AbilityData")]
 public class AbilityData : ScriptableObject
 {
+    [SerializeField] private Sprite abilitySprite;
     [SerializeField] private int maxLevel = 1;
     [SerializeField] private Stats baseStats;
     [SerializeField] private Stats[] LevelUpStats;
 
     public Stats GetBaseStats => baseStats;
-    public int GetMaxLevel => maxLevel;
+    public int GetMaxLevel { get { return maxLevel; } } 
+    public Sprite GetSprite { get { return abilitySprite; } }
 
     public Stats GetLevelData(int level)
     {
@@ -38,7 +40,7 @@ public struct Stats
     public float projectileInterval;
     public int healingAmount;
     public bool isPassive;
-
+    
 
 
     public static Stats operator +(Stats statsOne, Stats otherStats)

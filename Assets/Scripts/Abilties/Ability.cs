@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public abstract class Ability : MonoBehaviour
@@ -13,6 +12,7 @@ public abstract class Ability : MonoBehaviour
     public string GetNextLevelDescriptionText { get => nextLevelStats.descriptionText; }
     public string GetNextLevelNameText { get => nextLevelStats.nameText; }
     public int GetCurrentLevel { get => currentLevel; }
+    public Sprite GetSprite { get => AbilityData.GetSprite; }
     public bool IsActive = false;
 
     private void Awake()

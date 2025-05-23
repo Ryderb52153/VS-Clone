@@ -45,7 +45,7 @@ public class UpgradePanel : MonoBehaviour
             int numb = i;
 
             upgradeButtons[i].onClick.AddListener(
-                () => abilityRanksUI.SetNewRank(randomAbilities[numb]));
+                () => abilityRanksUI.SetRank(randomAbilities[numb]));
 
             // Ability Ranks UI 
 

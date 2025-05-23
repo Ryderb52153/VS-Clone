@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04d6f1a846cb014bbfb607783607997, type: 3}
   m_Name: TankUp
   m_EditorClassIdentifier: 
+  abilitySprite: {fileID: 7372525243067328263, guid: 7776c9124143726489ef642f8de0d128, type: 3}
   maxLevel: 8
   baseStats:
     nameText: Tank Up

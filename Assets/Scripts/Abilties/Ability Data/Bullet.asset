@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04d6f1a846cb014bbfb607783607997, type: 3}
   m_Name: Bullet
   m_EditorClassIdentifier: 
+  abilitySprite: {fileID: 809005053530780655, guid: d8d6e7c2f6849394299d15c022ce2cd0, type: 3}
   maxLevel: 8
   baseStats:
     nameText: Bullet
