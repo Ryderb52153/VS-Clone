@@ -5,6 +5,7 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
     [SerializeField] private int enemyHealth = 5;
     [SerializeField] private int enemyDamage = 10;
     [SerializeField] private int enemySpeed = 2;
+    [SerializeField] private int experienceWorth = 50;
 
     public int EnemyHealth { get { return enemyHealth; } }
     public int EnemyDamage { get { return enemyDamage; } }
@@ -26,7 +27,9 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
             gameObject.SetActive(false);
             GameManager.Instance.ActiveEnemies.Remove(this.gameObject);
             currentEnemyHealth = enemyHealth;
-            ObjectPooler.Instance.SpawnFromPool("Experience", transform.position, transform.rotation);
+            ExperienceDrop experience = ObjectPooler.Instance.SpawnFromPool
+                ("Experience", transform.position, transform.rotation).GetComponent<ExperienceDrop>();
+            experience.GetExperienceWorth = experienceWorth;
         }
         else
         {

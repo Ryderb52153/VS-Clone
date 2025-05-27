@@ -13,9 +13,10 @@ public class ExperienceBar : MonoBehaviour
         playerStats.ExpUpdate += ExpUpdate;
     }
 
-    private void ExpUpdate(int exp)
+    private void ExpUpdate(int currentExp, int expToLevel)
     {
-        expBar.value = exp *.01f;
+        float expPerecent = (float)currentExp / expToLevel;
+        expBar.value = expPerecent;
     }
 
     private void OnEnable()
