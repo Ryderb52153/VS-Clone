@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 8813176193908882509}
   - component: {fileID: 2459488333449012248}
   - component: {fileID: 2760948984260872835}
+  - component: {fileID: 4759371844890286877}
+  - component: {fileID: 9175280300313451088}
+  - component: {fileID: 6322795703736534706}
   m_Layer: 0
   m_Name: Ability Contoller
   m_TagString: Untagged
@@ -51,6 +54,10 @@ MonoBehaviour:
   - {fileID: 8813176193908882509}
   - {fileID: 2459488333449012248}
   - {fileID: 2760948984260872835}
+  defaultAbilities:
+  - {fileID: 4759371844890286877}
+  - {fileID: 9175280300313451088}
+  - {fileID: 6322795703736534706}
 --- !u!114 &8813176193908882509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +99,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityData: {fileID: 11400000, guid: 1af25dc1ea34c9b479c5d4e2bd98b404, type: 2}
+  IsActive: 0
+--- !u!114 &4759371844890286877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678063169897494063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30dde62e81a2e7545aba333e46852e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityData: {fileID: 11400000, guid: aad9439331011754da0dfa8a1e81d45f, type: 2}
+  IsActive: 0
+--- !u!114 &9175280300313451088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678063169897494063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4505e97214ed8e4fb34197a605d7b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityData: {fileID: 11400000, guid: 360a1cbad2cc7004aba8085d92555f8b, type: 2}
+  IsActive: 0
+--- !u!114 &6322795703736534706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678063169897494063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b625742e5777eef429837143c209103c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityData: {fileID: 11400000, guid: 3ef89c9bb88bffa439060b3e421654a4, type: 2}
   IsActive: 0
 --- !u!1 &8715896379531492988
 GameObject:

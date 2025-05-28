@@ -5,6 +5,7 @@ using System.Linq;
 public class AbilityController : MonoBehaviour
 {
     [SerializeField] private List<Ability> abilities;
+    [SerializeField] private List<Ability> defaultAbilities;
 
     private void Start()
     {
@@ -13,10 +14,28 @@ public class AbilityController : MonoBehaviour
 
     public Ability[] GetRandomAbilities(int numberOfAbilities)
     {
-        List<Ability> randomAbilities = new List<Ability>();
         System.Random random = new System.Random();
 
-        return abilities.OrderBy(x => random.Next()).Take(numberOfAbilities).ToArray();
+        // Get non-maxed abilities
+        var available = abilities
+            .Where(a => a.GetCurrentLevel < a.GetMaxLevel)
+            .OrderBy(x => random.Next())
+            .Take(numberOfAbilities)
+            .ToList();
+
+        // If not enough, fill the rest from defaultAbilities
+        if (available.Count < numberOfAbilities)
+        {
+            int needed = numberOfAbilities - available.Count;
+
+            var fallback = defaultAbilities
+                .OrderBy(x => random.Next())
+                .Take(needed);
+
+            available.AddRange(fallback);
+        }
+
+        return available.ToArray();
     }
 }
 

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,7 +33,7 @@ public class UpgradePanel : MonoBehaviour
 
         for (int i = 0; i < upgradeButtons.Length; i++)
         {
-            if (randomAbilities[i].IsActive)
+            if(randomAbilities[i].IsActive)
             {
                 SetButtonForAbilityLevelUp(randomAbilities, i);
             }
