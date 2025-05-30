@@ -26,6 +26,7 @@ public class HealthBar : MonoBehaviour
         float healthPercent = (float)currentHealth / maxHealth;
         healthBar.value = healthPercent;
         healthAmountText.text = currentHealth + "/" + maxHealth;
+        print("Health Bar Updated :" + healthPercent);
     }
 
     private void OnEnable()

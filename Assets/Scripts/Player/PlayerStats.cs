@@ -64,7 +64,7 @@ public class PlayerStats : MonoBehaviour
 
         LevelUp.Invoke();
         currentEXP = expLevels - currentEXP;
-        expLevels += 100;
+        expLevels += 10;
         //currentLevel++;
     }
 
