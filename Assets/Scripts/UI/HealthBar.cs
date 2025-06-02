@@ -19,14 +19,20 @@ public class HealthBar : MonoBehaviour
     private void SetInitialHealth(int maxHealth)
     {
         healthBar.value = maxHealth;
+        print("Health Bar Initial :" + healthBar.value);
     }
 
     private void HealthUpdate(int maxHealth, int currentHealth)
     {
-        float healthPercent = (float)currentHealth / maxHealth;
+        float healthPercent = (float)currentHealth / (float)maxHealth;
         healthBar.value = healthPercent;
         healthAmountText.text = currentHealth + "/" + maxHealth;
-        print("Health Bar Updated :" + healthPercent);
+        //print("Health Bar Updated :" + healthBar.value);
+    }
+
+    public void HealthBarChanged()
+    {
+        print("Health Bar changed " + healthBar.value);
     }
 
     private void OnEnable()

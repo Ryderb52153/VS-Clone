@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DefenseBallBehaviour : ProjectileBehaviour
 {
-    public GameObject player;
+    private GameObject player;
 
     private void Awake()
     {
