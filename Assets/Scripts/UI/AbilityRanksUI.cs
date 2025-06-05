@@ -51,5 +51,4 @@ public class AbilityRanksUI : MonoBehaviour
         nextAvailableIndex++;
         return data;
     }
-
 }

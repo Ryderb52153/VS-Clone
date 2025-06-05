@@ -19,18 +19,12 @@ public class HealthBar : MonoBehaviour
     private void SetInitialHealth(int maxHealth)
     {
         healthBar.value = maxHealth;
-        print("Health Bar Initial :" + healthBar.value);
     }
 
     private void HealthUpdate(int maxHealth, int currentHealth)
     {
         healthBar.value = Mathf.Clamp01((float)currentHealth / maxHealth);
         healthAmountText.text = $"{currentHealth}/{maxHealth}";
-    }
-
-    public void HealthBarChanged()
-    {
-        print("Health Bar changed " + healthBar.value);
     }
 
     private void OnEnable()
