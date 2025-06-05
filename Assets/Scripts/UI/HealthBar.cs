@@ -24,10 +24,8 @@ public class HealthBar : MonoBehaviour
 
     private void HealthUpdate(int maxHealth, int currentHealth)
     {
-        float healthPercent = (float)currentHealth / (float)maxHealth;
-        healthBar.value = healthPercent;
-        healthAmountText.text = currentHealth + "/" + maxHealth;
-        //print("Health Bar Updated :" + healthBar.value);
+        healthBar.value = Mathf.Clamp01((float)currentHealth / maxHealth);
+        healthAmountText.text = $"{currentHealth}/{maxHealth}";
     }
 
     public void HealthBarChanged()
