@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour
     private int currentHealth;
     private int currentEXP;
     private bool isDead = false;
-    //private int currentLevel = 0;
+
     private int expLevels = 100;
     //private int[] expLevels = { 150, 220, 320, 450, 510, 620, 820, 970, 1150, 1360};
 
@@ -63,9 +63,8 @@ public class PlayerStats : MonoBehaviour
         if(currentEXP < expLevels) { return; }
 
         LevelUp.Invoke();
-        currentEXP = expLevels - currentEXP;
+        currentEXP -= expLevels;
         expLevels += 10;
-        //currentLevel++;
     }
 
     private void CheckDeath()
