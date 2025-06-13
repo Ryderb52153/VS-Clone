@@ -16,13 +16,9 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Experience")
+        if(collision.TryGetComponent<IInteract>(out IInteract component))
         {
-            if(collision.TryGetComponent<ExperienceDrop>(out ExperienceDrop exp))
-            {
-                collision.gameObject.SetActive(false);
-                Stats.AddExperience(exp.GetExperienceWorth);
-            }
+            component.Interact();
         }
     }
 }

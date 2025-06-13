@@ -48,6 +48,16 @@ public class GameManager : MonoBehaviour
         gameOverDelegate.Invoke();
     }
 
+    public void AddExperience(int experience)
+    {
+        player.Stats.AddExperience(experience);
+    }
+
+    public void AddHealth(int health)
+    {
+        player.Stats.AddHealth(health);
+    }
+
     private void OnEnable()
     {
         if (Player != null)

@@ -58,6 +58,12 @@ public class PlayerStats : MonoBehaviour
         HealthUpdate?.Invoke(maxHealth, currentHealth);
     }
 
+    public void AddHealth(int healthToAdd)
+    {
+        currentHealth += healthToAdd;
+        HealthUpdate?.Invoke(maxHealth, currentHealth);
+    }
+
     private void CheckLevelUp()
     {
         if(currentEXP < expLevels) { return; }

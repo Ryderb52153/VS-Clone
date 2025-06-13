@@ -27,9 +27,14 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
             gameObject.SetActive(false);
             GameManager.Instance.ActiveEnemies.Remove(this.gameObject);
             currentEnemyHealth = enemyHealth;
-            ExperienceDrop experience = ObjectPooler.Instance.SpawnFromPool
-                ("Experience", transform.position, transform.rotation).GetComponent<ExperienceDrop>();
-            experience.GetExperienceWorth = experienceWorth;
+
+            HealthUpDrop experience = ObjectPooler.Instance.SpawnFromPool
+                ("HealthUpDrop", transform.position, transform.rotation).GetComponent<HealthUpDrop>();
+                experience.HealthAmount = 10;
+
+            /*            ExperienceDrop experience = ObjectPooler.Instance.SpawnFromPool
+                            ("Experience", transform.position, transform.rotation).GetComponent<ExperienceDrop>();
+                        experience.ExperienceWorth = experienceWorth;*/
         }
         else
         {
