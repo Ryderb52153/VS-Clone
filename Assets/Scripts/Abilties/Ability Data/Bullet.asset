@@ -22,7 +22,7 @@ MonoBehaviour:
     damage: 6
     damageVariance: 2
     lifeSpan: 8
-    projectileInterval: 0
+    attackInterval: 1
     healingAmount: 0
     isPassive: 0
   LevelUpStats:
@@ -33,27 +33,27 @@ MonoBehaviour:
     damage: 2
     damageVariance: 2
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 3
-    descriptionText: +Damage and -Cooldown
+    descriptionText: +Damage and -Cooldown and more shots
     moveSpeed: 1
     cooldown: -0.5
     damage: 2
     damageVariance: 2
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 1
     healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 4
-    descriptionText: +Damage and -Cooldown
+    descriptionText: +Damage and -Cooldown and more shots
     moveSpeed: 1
     cooldown: -0.5
     damage: 2
     damageVariance: 2
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 1
     healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 5
@@ -63,7 +63,7 @@ MonoBehaviour:
     damage: 2
     damageVariance: 2
     lifeSpan: 1
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 6
@@ -73,7 +73,7 @@ MonoBehaviour:
     damage: 2
     damageVariance: 2
     lifeSpan: 1
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 7
@@ -83,7 +83,7 @@ MonoBehaviour:
     damage: 2
     damageVariance: 2
     lifeSpan: 1
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Bullet Level 8
@@ -93,6 +93,6 @@ MonoBehaviour:
     damage: 2
     damageVariance: 2
     lifeSpan: 1
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0

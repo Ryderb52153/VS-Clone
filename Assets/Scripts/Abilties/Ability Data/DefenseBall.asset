@@ -22,7 +22,7 @@ MonoBehaviour:
     damage: 2
     damageVariance: 1
     lifeSpan: 10
-    projectileInterval: 0
+    attackInterval: 1
     healingAmount: 0
     isPassive: 0
   LevelUpStats:
@@ -33,7 +33,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Defense Ball Level 3
@@ -43,7 +43,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Defense Ball Level 4
@@ -53,7 +53,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Defense Ball Level 5
@@ -63,7 +63,7 @@ MonoBehaviour:
     damage: 2
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Defense Ball Level 6
@@ -73,7 +73,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Defense Ball Level 7
@@ -83,7 +83,7 @@ MonoBehaviour:
     damage: 2
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Defense Ball Level 8
@@ -93,6 +93,6 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 1
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0

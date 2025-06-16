@@ -22,7 +22,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 1
     healingAmount: 0
     isPassive: 0
   LevelUpStats:
@@ -33,7 +33,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -43,7 +43,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -53,7 +53,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -63,7 +63,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -73,7 +73,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -83,7 +83,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -93,7 +93,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -103,7 +103,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -113,7 +113,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -123,7 +123,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -133,7 +133,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -143,7 +143,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -153,7 +153,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -163,7 +163,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -173,7 +173,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -183,7 +183,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -193,7 +193,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -203,7 +203,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -213,7 +213,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -223,7 +223,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -233,7 +233,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -243,7 +243,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -253,7 +253,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -263,7 +263,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -273,7 +273,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -283,7 +283,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -293,7 +293,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -303,7 +303,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -313,7 +313,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -323,7 +323,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -333,7 +333,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -343,7 +343,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -353,7 +353,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -363,7 +363,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -373,7 +373,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -383,7 +383,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -393,7 +393,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -403,7 +403,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -413,7 +413,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -423,7 +423,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -433,7 +433,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -443,7 +443,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -453,7 +453,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -463,7 +463,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -473,7 +473,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -483,7 +483,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -493,7 +493,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -503,7 +503,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -513,7 +513,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -523,7 +523,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -533,7 +533,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -543,7 +543,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -553,7 +553,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -563,7 +563,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -573,7 +573,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -583,7 +583,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -593,7 +593,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -603,7 +603,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -613,7 +613,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -623,7 +623,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -633,7 +633,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -643,7 +643,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -653,7 +653,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -663,7 +663,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -673,7 +673,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -683,7 +683,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -693,7 +693,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -703,7 +703,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -713,7 +713,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -723,7 +723,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -733,7 +733,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -743,7 +743,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -753,7 +753,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -763,7 +763,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -773,7 +773,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -783,7 +783,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -793,7 +793,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -803,7 +803,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -813,7 +813,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -823,7 +823,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -833,7 +833,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -843,7 +843,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -853,7 +853,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -863,7 +863,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -873,7 +873,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -883,7 +883,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -893,7 +893,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -903,7 +903,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -913,7 +913,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -923,7 +923,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -933,7 +933,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -943,7 +943,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -953,7 +953,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -963,7 +963,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -973,7 +973,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -983,7 +983,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -993,7 +993,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -1003,7 +1003,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -1013,7 +1013,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
   - nameText: Special Bucks
@@ -1023,6 +1023,6 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0

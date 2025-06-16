@@ -12,12 +12,12 @@ public class ScoreUI : MonoBehaviour
     private void Start()
     {
         playerStats = GameManager.Instance.Player.Stats;
-        playerStats.ExpUpdate += ScoreUpdate;
+        playerStats.PointUpdate += ScoreUpdate;
     }
 
-    private void ScoreUpdate(int currentExp, int expToLevel)
+    private void ScoreUpdate(int points)
     {
-        currentScore += currentExp;
+        currentScore += points;
         scoreText.text = currentScore.ToString();
     }
 }

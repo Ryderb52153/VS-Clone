@@ -22,7 +22,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 30
     isPassive: 1
   LevelUpStats:
@@ -33,7 +33,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 1
   - nameText: Tank Up Level 3
@@ -43,7 +43,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 1
   - nameText: Tank Up Level 4
@@ -53,7 +53,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 1
   - nameText: Tank Up Level 5
@@ -63,7 +63,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 1
   - nameText: Tank Up Level 6
@@ -73,7 +73,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 1
   - nameText: Tank Up Level 7
@@ -83,7 +83,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 1
   - nameText: Tank Up Final
@@ -93,6 +93,6 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     lifeSpan: 0
-    projectileInterval: 0
+    attackInterval: 0
     healingAmount: 0
     isPassive: 1

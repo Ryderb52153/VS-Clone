@@ -22,6 +22,7 @@ public class PlayerStats : MonoBehaviour
 
     public event Action<int, int> ExpUpdate;
     public event Action<int, int> HealthUpdate;
+    public event Action<int> PointUpdate;
     public event Action LevelUp;
 
     private void Start()
@@ -49,6 +50,7 @@ public class PlayerStats : MonoBehaviour
         currentEXP += experience;
         CheckLevelUp();
         ExpUpdate.Invoke(currentEXP, expLevels);
+        PointUpdate.Invoke(experience);
     }
 
     public void AddMaxHealth(int healthToAdd)

@@ -37,7 +37,7 @@ public struct Stats
     public float damage;
     public float damageVariance;
     public float lifeSpan;
-    public float projectileInterval;
+    public float attackInterval;
     public int healingAmount;
     public bool isPassive;
     
@@ -55,7 +55,7 @@ public struct Stats
         baseStats.damage = statsOne.damage + otherStats.damage;
         baseStats.damageVariance = statsOne.damageVariance + otherStats.damageVariance;
         baseStats.lifeSpan = statsOne.lifeSpan + otherStats.lifeSpan;
-        baseStats.projectileInterval = statsOne.projectileInterval + otherStats.projectileInterval;
+        baseStats.attackInterval = statsOne.attackInterval + otherStats.attackInterval;
         baseStats.healingAmount = statsOne.healingAmount + otherStats.healingAmount;
         baseStats.isPassive = statsOne.isPassive;
 

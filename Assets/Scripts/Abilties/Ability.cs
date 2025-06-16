@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public abstract class Ability : MonoBehaviour
@@ -78,7 +79,19 @@ public abstract class Ability : MonoBehaviour
 
         if (cooldownRemaining < 0)
         {
+            if (currentStats.attackInterval > 1)
+                StartCoroutine(AttackIntervalCoroutine());
+            else if (currentStats.attackInterval == 1)
+                Attack();
+        }
+    }
+
+    IEnumerator AttackIntervalCoroutine()
+    {
+        for (int i = 0; i < currentStats.attackInterval; i++)
+        {
             Attack();
+            yield return new WaitForSeconds(.1f);
         }
     }
 
