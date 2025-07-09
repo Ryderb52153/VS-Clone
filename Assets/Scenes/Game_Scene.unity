@@ -4939,6 +4939,9 @@ MonoBehaviour:
   - tag: Enemy Purple
     prefab: {fileID: 8577565923081341760, guid: c4d3eca2fc05b4440a3eb969700e7ef9, type: 3}
     size: 50
+  - tag: Enemy Red
+    prefab: {fileID: 3793228075161339729, guid: b5f730feaff96ae499f535ac4ed6676b, type: 3}
+    size: 50
 --- !u!4 &1864801926
 Transform:
   m_ObjectHideFlags: 0
