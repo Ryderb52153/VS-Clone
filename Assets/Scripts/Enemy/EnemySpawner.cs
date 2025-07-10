@@ -1,13 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private float spawnCooldown = 6f;
+    [SerializeField] private List<SpawnPhase> spawnPhases;
 
-    private float cooldownRemaining;
+    private int currentTick = 0;
+    private int cooldownRemaining = 0;
+    private int currentPhaseIndex = 0;
 
+    private SpawnPhase CurrentPhase => spawnPhases[currentPhaseIndex];
     private float[] spawnXVectorRange = { -.5f, -.25f, .25f, .5f, 1f };
-    private string[] enemies = { "Enemy Triangle", "Enemy Purple", "Enemy Red" };
 
     private void Start()
     {
@@ -16,18 +19,30 @@ public class EnemySpawner : MonoBehaviour
 
     private void TimeTick(object sender, TimeTickSystem.OnTickEventArgs e)
     {
+        currentTick++;
+
+        if (currentPhaseIndex < spawnPhases.Count - 1 &&
+            currentTick >= spawnPhases[currentPhaseIndex + 1].startTick)
+        {
+            print("New Phase");
+            currentPhaseIndex++;
+            cooldownRemaining = 0;
+        }
+
         cooldownRemaining--;
-        if (cooldownRemaining >= 0) { return; }
+        if(cooldownRemaining > 0) { return; }
 
         SpawnEnemy();
-        cooldownRemaining = spawnCooldown;
+        cooldownRemaining = CurrentPhase.spawnCooldown;
     }
 
     private void SpawnEnemy()
     {
         Vector3 spawnPos = GetRandomPosition();
-        int randomEnemy = Random.Range(0, enemies.Length);
-        GameObject enemy = ObjectPooler.Instance.SpawnFromPool(enemies[randomEnemy], new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
+        string[] availableEnemies = CurrentPhase.enemyTypes;
+
+        int randomEnemy = Random.Range(0, availableEnemies.Length);
+        GameObject enemy = ObjectPooler.Instance.SpawnFromPool(availableEnemies[randomEnemy], new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
         GameManager.Instance.ActiveEnemies.Add(enemy);
     }
 
@@ -54,4 +69,12 @@ public class EnemySpawner : MonoBehaviour
     {
         TimeTickSystem.OnTick -= TimeTick;
     }
+}
+
+[System.Serializable]
+public class SpawnPhase
+{
+    public int startTick;
+    public int spawnCooldown;
+    public string[] enemyTypes;
 }
