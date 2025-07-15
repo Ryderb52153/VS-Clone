@@ -2485,20 +2485,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPhases:
-  - startTick: 0
-    spawnCooldown: 10
+  - spawnCooldown: 10
     enemyTypes:
     - Enemy Triangle
-  - startTick: 150
-    spawnCooldown: 10
-    enemyTypes:
-    - Enemy Triangle
-    - Enemy Purple
-  - startTick: 500
-    spawnCooldown: 10
+  - spawnCooldown: 10
     enemyTypes:
     - Enemy Triangle
     - Enemy Purple
+  - spawnCooldown: 10
+    enemyTypes:
+    - Enemy Triangle
+    - Enemy Purple
+    - Enemy Red
+  - spawnCooldown: 10
+    enemyTypes:
+    - Enemy Triangle
+    - Enemy Triangle
+    - Enemy Red
+  - spawnCooldown: 5
+    enemyTypes:
+    - Enemy Triangle
+    - Enemy Red
     - Enemy Red
 --- !u!4 &985484039
 Transform:

@@ -5,7 +5,6 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private List<SpawnPhase> spawnPhases;
 
-    private int currentTick = 0;
     private int cooldownRemaining = 0;
     private int currentPhaseIndex = 0;
 
@@ -15,25 +14,23 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.endGameDelegate = SpawnEndGame;
+        GameManager.Instance.Player.Stats.LevelUp += PlayerLeveledUP;
     }
 
     private void TimeTick(object sender, TimeTickSystem.OnTickEventArgs e)
     {
-        currentTick++;
-
-        if (currentPhaseIndex < spawnPhases.Count - 1 &&
-            currentTick >= spawnPhases[currentPhaseIndex + 1].startTick)
-        {
-            print("New Phase");
-            currentPhaseIndex++;
-            cooldownRemaining = 0;
-        }
-
         cooldownRemaining--;
         if(cooldownRemaining > 0) { return; }
 
         SpawnEnemy();
         cooldownRemaining = CurrentPhase.spawnCooldown;
+    }
+
+    private void PlayerLeveledUP()
+    {
+        if (currentPhaseIndex > spawnPhases.Count - 2) { return; }
+        currentPhaseIndex++;
+        cooldownRemaining = 0;
     }
 
     private void SpawnEnemy()
@@ -62,11 +59,15 @@ public class EnemySpawner : MonoBehaviour
 
     private void OnEnable()
     {
+        if (GameManager.Instance != null) 
+            GameManager.Instance.Player.Stats.LevelUp += PlayerLeveledUP;
+
         TimeTickSystem.OnTick += TimeTick;
     }
 
     private void OnDisable()
     {
+        GameManager.Instance.Player.Stats.LevelUp -= PlayerLeveledUP;
         TimeTickSystem.OnTick -= TimeTick;
     }
 }
@@ -74,7 +75,6 @@ public class EnemySpawner : MonoBehaviour
 [System.Serializable]
 public class SpawnPhase
 {
-    public int startTick;
     public int spawnCooldown;
     public string[] enemyTypes;
 }
