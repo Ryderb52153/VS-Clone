@@ -25,7 +25,7 @@ public class EnemyAI : MonoBehaviour
         intention += PushAwayFromOtherEnemies(intention);
 
         // If we're really close just stop.
-        if (intention.magnitude < 0.25f)
+        if (intention.magnitude < 0.05f)
         {
             return Vector3.zero;
         }
@@ -38,7 +38,7 @@ public class EnemyAI : MonoBehaviour
         Vector3 direction = GetDirection(this.gameObject, player);
         float distance = GetDistance(this.gameObject, player);
 
-        float targetDistance = 1f;
+        float targetDistance = .9f;
         float springStrength = (distance - targetDistance);
         intention += direction * springStrength;
         return intention;
@@ -50,11 +50,11 @@ public class EnemyAI : MonoBehaviour
         {
             if (activeEnemy == this.gameObject) { continue; }
 
-            Vector3 direction2 = GetDirection(this.gameObject, activeEnemy);
-            float distance2 = GetDistance(this.gameObject, activeEnemy);
+            Vector3 direction = GetDirection(this.gameObject, activeEnemy);
+            float distance = GetDistance(this.gameObject, activeEnemy);
 
-            float springStrength2 = 1f / (1f + distance2 * distance2 * distance2); // Inverse cube of distance
-            intention -= direction2 * springStrength2;
+            float springStrength = 1f / (1f + distance * distance * distance); // Inverse cube of distance
+            intention -= direction * springStrength;
         }
 
         return intention;
