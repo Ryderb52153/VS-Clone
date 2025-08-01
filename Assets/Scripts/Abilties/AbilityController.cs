@@ -12,6 +12,8 @@ public class AbilityController : MonoBehaviour
         abilities[0].ActivateAbility();
     }
 
+    public Ability GetStartingAbility => abilities[0];
+
     public Ability[] GetRandomAbilities(int numberOfAbilities)
     {
         System.Random random = new System.Random();

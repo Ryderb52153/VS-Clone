@@ -19,6 +19,7 @@ public class UpgradePanel : MonoBehaviour
         playerstats = GameManager.Instance.Player.Stats;
         abilityController = GameManager.Instance.Player.AbilityController;
         playerstats.LevelUp += ShowUpgradePanel;
+        abilityRanksUI.SetRank(abilityController.GetStartingAbility);
     }
 
     private void ShowUpgradePanel()
