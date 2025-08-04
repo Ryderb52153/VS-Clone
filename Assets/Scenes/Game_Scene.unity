@@ -4981,6 +4981,9 @@ MonoBehaviour:
   - tag: Enemy Red
     prefab: {fileID: 3793228075161339729, guid: b5f730feaff96ae499f535ac4ed6676b, type: 3}
     size: 50
+  - tag: Health Animation
+    prefab: {fileID: 4210018187164888401, guid: e9d2906d2556c1d41879da0a563eb9e7, type: 3}
+    size: 3
 --- !u!4 &1864801926
 Transform:
   m_ObjectHideFlags: 0

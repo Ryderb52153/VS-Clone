@@ -7,6 +7,7 @@ public class HealthUpDrop : MonoBehaviour, IInteract, IPointerClickHandler
 
     public void Interact()
     {
+        ObjectPooler.Instance.SpawnFromPool("Health Animation", transform.position, Quaternion.identity);
         GameManager.Instance.AddHealth(HealthAmount);
         this.gameObject.SetActive(false);
     }
