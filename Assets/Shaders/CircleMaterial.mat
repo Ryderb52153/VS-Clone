@@ -74,10 +74,10 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Radius: 0.36
-    - _RemovedSegments: -1.63
-    - _Rotation: 0.12
+    - _RemovedSegments: 0
+    - _Rotation: 0
     - _SegmentCount: 5
-    - _SegmentSpacing: 0.09
+    - _SegmentSpacing: 0.08
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 0.26814097, g: 0.62352943, b: 0.20392157, a: 1}

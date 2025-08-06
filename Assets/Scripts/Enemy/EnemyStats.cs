@@ -38,8 +38,7 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
 
     private void DropExpOrHealth()
     {
-        //int random = Random.Range(0, 5);
-        int random = 0;
+        int random = Random.Range(0, 5);
 
         if (random == 0)
         {
