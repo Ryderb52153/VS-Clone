@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,53 +18,52 @@ public class UpgradePanel : MonoBehaviour
         playerstats = GameManager.Instance.Player.Stats;
         abilityController = GameManager.Instance.Player.AbilityController;
         playerstats.LevelUp += ShowUpgradePanel;
-        abilityRanksUI.SetRank(abilityController.GetStartingAbility);
+        abilityController.OnAbilityChanged += abilityRanksUI.SetRank;
+    }
+
+    private void OnDestroy()
+    {
+        if (playerstats != null) playerstats.LevelUp -= ShowUpgradePanel;
+        if (abilityController != null) abilityController.OnAbilityChanged -= abilityRanksUI.SetRank;
     }
 
     private void ShowUpgradePanel()
     {
         upgradePanel.gameObject.SetActive(true);
-        SetAbilitiesToButtons();
+        BindButtons();
     }
 
-    private void SetAbilitiesToButtons()
+    private void BindButtons()
     {
-        Ability[] randomAbilities = abilityController.GetRandomAbilities(upgradeButtons.Length);
+        RemoveListenersFromButtons();
+
+        var options = abilityController.GetUpgradeOptions(upgradeButtons.Length);
 
         for (int i = 0; i < upgradeButtons.Length; i++)
         {
-            if(randomAbilities[i].IsActive)
-            {
-                SetButtonForAbilityLevelUp(randomAbilities, i);
-            }
-            else
-            {
-                SetButtonForAbilityActivate(randomAbilities, i);
-            }
+            var btn = upgradeButtons[i];
+            var nameLabel = buttonNameText[i];
+            var descLabel = buttonTexts[i];
 
-            int numb = i;
-            upgradeButtons[i].onClick.AddListener(
-                () => abilityRanksUI.SetRank(randomAbilities[numb]));
+            var option = options[i];
 
-            upgradeButtons[i].onClick.AddListener(ButtonPressed);
+            nameLabel.text = option.NextName;
+            descLabel.text = option.NextDescription;
+
+            btn.onClick.AddListener(() =>
+            {
+                // Perform the upgrade/activation
+                option.Perform?.Invoke();
+
+                // Rank UI will also update via OnAbilityChanged event, but this keeps it snappy
+                abilityRanksUI.SetRank(option.Ability);
+
+                ClosePanel();
+            });
         }
     }
 
-    private void SetButtonForAbilityActivate(Ability[] randomAbilities, int i)
-    {
-        upgradeButtons[i].onClick.AddListener(randomAbilities[i].ActivateAbility);
-        buttonTexts[i].text = randomAbilities[i].GetNextLevelDescriptionText;
-        buttonNameText[i].text = randomAbilities[i].GetNextLevelNameText;
-    }
-
-    private void SetButtonForAbilityLevelUp(Ability[] randomAbilities, int i)
-    {
-        upgradeButtons[i].onClick.AddListener(randomAbilities[i].LevelUpAbililty);
-        buttonTexts[i].text = randomAbilities[i].GetNextLevelDescriptionText;
-        buttonNameText[i].text = randomAbilities[i].GetNextLevelNameText;
-    }
-
-    private void ButtonPressed()
+    private void ClosePanel()
     {
         upgradePanel.gameObject.SetActive(false);
         GameManager.Instance.UnpauseGame();
@@ -74,7 +72,7 @@ public class UpgradePanel : MonoBehaviour
 
     private void RemoveListenersFromButtons()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < upgradeButtons.Length; i++)
         {
             upgradeButtons[i].onClick.RemoveAllListeners();
         }

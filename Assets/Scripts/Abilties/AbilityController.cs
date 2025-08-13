@@ -1,43 +1,94 @@
+using System;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
 
 public class AbilityController : MonoBehaviour
 {
     [SerializeField] private List<Ability> abilities;
     [SerializeField] private List<Ability> defaultAbilities;
 
+    public Ability GetStartingAbility => abilities[0];
+    public event Action<Ability> OnAbilityChanged;
+
+    private System.Random _rng = new System.Random();
+
     private void Start()
     {
-        abilities[0].ActivateAbility();
+        if (abilities != null && abilities.Count > 0)
+        {
+            ActivateAbility(abilities[0]);
+        }
     }
 
-    public Ability GetStartingAbility => abilities[0];
-
-    public Ability[] GetRandomAbilities(int numberOfAbilities)
+    public UpgradeOption[] GetUpgradeOptions(int count)
     {
-        System.Random random = new System.Random();
+        // Shuffle helper
+        IEnumerable<T> Shuffle<T>(IEnumerable<T> src) => src.OrderBy(_ => _rng.Next());
 
-        // Get non-maxed abilities
-        var available = abilities
+        var pool = abilities
             .Where(a => a.GetCurrentLevel < a.GetMaxLevel)
-            .OrderBy(x => random.Next())
-            .Take(numberOfAbilities)
             .ToList();
 
-        // If not enough, fill the rest from defaultAbilities
-        if (available.Count < numberOfAbilities)
+        // Not enough? pad with defaults
+        if (pool.Count < count)
         {
-            int needed = numberOfAbilities - available.Count;
-
-            var fallback = defaultAbilities
-                .OrderBy(x => random.Next())
-                .Take(needed);
-
-            available.AddRange(fallback);
+            print("Added Defaults");
+            var needed = count - pool.Count;
+            pool.AddRange(Shuffle(defaultAbilities).Take(needed));
         }
 
-        return available.ToArray();
+        // Take random selection and build options
+        return Shuffle(pool)
+            .Take(count)
+            .Select(a => BuildOption(a))
+            .ToArray();
+    }
+
+    private UpgradeOption BuildOption(Ability ability)
+    {
+        bool isActive = ability.IsActive;
+
+        return new UpgradeOption
+        {
+            Ability = ability,
+            NextName = ability.GetNextLevelNameText,
+            NextDescription = ability.GetNextLevelDescriptionText,
+            IsActivation = !isActive,
+            Perform = () =>
+            {
+                if (!isActive)
+                    ActivateAbility(ability);
+                else
+                    LevelUpAbility(ability);
+            }
+        };
+    }
+
+    public void ActivateAbility(Ability ability)
+    {
+        if (!ability.IsActive)
+        {
+            ability.ActivateAbility();
+            OnAbilityChanged?.Invoke(ability);
+        }
+    }
+
+    public void LevelUpAbility(Ability ability)
+    {
+        if (ability.GetCurrentLevel < ability.GetMaxLevel)
+        {
+            ability.LevelUpAbililty();
+            OnAbilityChanged?.Invoke(ability);
+        }
+    }
+
+    public struct UpgradeOption
+    {
+        public Ability Ability;
+        public string NextName;
+        public string NextDescription;
+        public Action Perform;
+        public bool IsActivation;
     }
 }
-

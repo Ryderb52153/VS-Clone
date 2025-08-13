@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04d6f1a846cb014bbfb607783607997, type: 3}
+  m_Name: Vacuum
+  m_EditorClassIdentifier: 
+  abilitySprite: {fileID: 809005053530780655, guid: d8d6e7c2f6849394299d15c022ce2cd0, type: 3}
+  maxLevel: 8
+  baseStats:
+    nameText: Vacuum
+    descriptionText: Mouse Click to pick up an area of pick ups
+    moveSpeed: 0
+    cooldown: 0
+    damage: 0
+    damageVariance: 0
+    lifeSpan: 0
+    attackInterval: 0
+    healingAmount: 0
+    isPassive: 1
+  LevelUpStats:
+  - nameText: 
+    descriptionText: 
+    moveSpeed: 0
+    cooldown: 0
+    damage: 0
+    damageVariance: 0
+    lifeSpan: 0
+    attackInterval: 0
+    healingAmount: 0
+    isPassive: 0
+  - nameText: 
+    descriptionText: 
+    moveSpeed: 0
+    cooldown: 0
+    damage: 0
+    damageVariance: 0
+    lifeSpan: 0
+    attackInterval: 0
+    healingAmount: 0
+    isPassive: 0
+  - nameText: 
+    descriptionText: 
+    moveSpeed: 0
+    cooldown: 0
+    damage: 0
+    damageVariance: 0
+    lifeSpan: 0
+    attackInterval: 0
+    healingAmount: 0
+    isPassive: 0
+  - nameText: 
+    descriptionText: 
+    moveSpeed: 0
+    cooldown: 0
+    damage: 0
+    damageVariance: 0
+    lifeSpan: 0
+    attackInterval: 0
+    healingAmount: 0
+    isPassive: 0
+  - nameText: 
+    descriptionText: 
+    moveSpeed: 0
+    cooldown: 0
+    damage: 0
+    damageVariance: 0
+    lifeSpan: 0
+    attackInterval: 0
+    healingAmount: 0
+    isPassive: 0
+  - nameText: 
+    descriptionText: 
+    moveSpeed: 0
+    cooldown: 0
+    damage: 0
+    damageVariance: 0
+    lifeSpan: 0
+    attackInterval: 0
+    healingAmount: 0
+    isPassive: 0
+  - nameText: 
+    descriptionText: 
+    moveSpeed: 0
+    cooldown: 0
+    damage: 0
+    damageVariance: 0
+    lifeSpan: 0
+    attackInterval: 0
+    healingAmount: 0
+    isPassive: 0
+  - nameText: 
+    descriptionText: 
+    moveSpeed: 0
+    cooldown: 0
+    damage: 0
+    damageVariance: 0
+    lifeSpan: 0
+    attackInterval: 0
+    healingAmount: 0
+    isPassive: 0

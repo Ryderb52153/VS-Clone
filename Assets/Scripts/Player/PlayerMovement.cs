@@ -1,19 +1,12 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public PlayerStats Stats { set; private get; }
-    private Vector2 rawInputMovement;
+    public int MoveSpeed { set; private get; }
+    public Vector2 RawInputMovement { set; private get; }
 
     private void FixedUpdate()
     {
-        transform.Translate(rawInputMovement * Stats.MoveSpeed * Time.deltaTime);
-    }
-
-    public void OnMovement(InputAction.CallbackContext value)
-    {
-        Vector2 inputMovement = value.ReadValue<Vector2>();
-        rawInputMovement = new Vector3(inputMovement.x, inputMovement.y, 0);
+        transform.Translate(RawInputMovement * MoveSpeed * Time.deltaTime);
     }
 }

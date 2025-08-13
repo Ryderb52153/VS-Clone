@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -14,7 +15,24 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        movement.Stats = Stats;
+        movement.MoveSpeed = Stats.MoveSpeed;
         combat.Stats = Stats;
+    }
+
+
+    //Input System Events
+
+    public void OnMovement(InputAction.CallbackContext value)
+    {
+        Vector2 inputMovement = value.ReadValue<Vector2>();
+        Movement.RawInputMovement = new Vector3(inputMovement.x, inputMovement.y, 0);
+    }
+
+    public void OnLeftClick(InputAction.CallbackContext value)
+    {
+        //have some kind of check if its enabled by an ability.
+        //use the ability, send the location of the click if needed.
+        //set a timer for the cool down.
+        //print("Test left click");
     }
 }

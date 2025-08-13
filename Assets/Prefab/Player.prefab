@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4759371844890286877}
   - component: {fileID: 9175280300313451088}
   - component: {fileID: 6322795703736534706}
+  - component: {fileID: 4900423851306346303}
   m_Layer: 0
   m_Name: Ability Contoller
   m_TagString: Untagged
@@ -54,6 +55,7 @@ MonoBehaviour:
   - {fileID: 8813176193908882509}
   - {fileID: 2459488333449012248}
   - {fileID: 2760948984260872835}
+  - {fileID: 4900423851306346303}
   defaultAbilities:
   - {fileID: 4759371844890286877}
   - {fileID: 9175280300313451088}
@@ -141,6 +143,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityData: {fileID: 11400000, guid: 3ef89c9bb88bffa439060b3e421654a4, type: 2}
+  IsActive: 0
+--- !u!114 &4900423851306346303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678063169897494063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5fec3761e7b0f4a9ebd61aa5f35b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityData: {fileID: 11400000, guid: d4d9b66b6273da6439f0ae79c41def4e, type: 2}
   IsActive: 0
 --- !u!1 &8715896379531492988
 GameObject:
@@ -292,8 +308,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4276389020115064977}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 2933259413776327738}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnMovement
         m_Mode: 0
         m_Arguments:
@@ -306,6 +322,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4a1d847c-a50c-4dad-9486-108299748d40
     m_ActionName: 'PlayerControls/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2933259413776327738}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnLeftClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: aac4eaaa-90a9-4878-9588-6ef0ec953170
+    m_ActionName: 'PlayerControls/Interact[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerControls
