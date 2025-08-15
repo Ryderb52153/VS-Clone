@@ -53,4 +53,3 @@ public class ProjectileBehaviour : MonoBehaviour
         TimeTickSystem.OnTick -= OnTick;
     }
 }
-

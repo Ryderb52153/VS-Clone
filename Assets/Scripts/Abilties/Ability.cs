@@ -5,7 +5,7 @@ public abstract class Ability : MonoBehaviour
 {
     [SerializeField] protected AbilityData AbilityData;
 
-    private float cooldownRemaining;
+    protected float cooldownRemaining;
     protected int currentLevel = 1;
     protected Stats currentStats;
     protected Stats nextLevelStats;
@@ -15,7 +15,8 @@ public abstract class Ability : MonoBehaviour
     public int GetCurrentLevel { get => currentLevel; }
     public int GetMaxLevel { get => AbilityData.GetMaxLevel; }
     public Sprite GetSprite { get => AbilityData.GetSprite; }
-    public bool IsActive = false;
+    public bool IsActive { get; set; } = false;
+    public bool IsInputInteractable { get => currentStats.isInputInteractable; }
 
     private void Awake()
     {
@@ -71,6 +72,11 @@ public abstract class Ability : MonoBehaviour
     protected virtual void DeactivatePassive()
     {
 
+    }
+
+    public virtual void Interact()
+    {
+        
     }
 
     protected virtual void OnTick(object sender, TimeTickSystem.OnTickEventArgs e)

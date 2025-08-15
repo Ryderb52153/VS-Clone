@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
 
 
     //Input System Events
-
     public void OnMovement(InputAction.CallbackContext value)
     {
         Vector2 inputMovement = value.ReadValue<Vector2>();
@@ -30,9 +29,17 @@ public class Player : MonoBehaviour
 
     public void OnLeftClick(InputAction.CallbackContext value)
     {
-        //have some kind of check if its enabled by an ability.
-        //use the ability, send the location of the click if needed.
-        //set a timer for the cool down.
-        //print("Test left click");
+        if (!value.performed) { return; }
+        if (abilityController.GetInteractableAbility == null) { return; }
+
+        abilityController.GetInteractableAbility.Interact();
     }
+}
+
+
+public enum InputKey
+{
+    None,
+    Leftclick,
+    Rightclick
 }

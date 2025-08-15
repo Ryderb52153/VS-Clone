@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityData: {fileID: 11400000, guid: bd5bbe1d02367a447b40078cd8ef32a7, type: 2}
+  InputKey: 0
   IsActive: 0
 --- !u!114 &2459488333449012248
 MonoBehaviour:
@@ -87,6 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityData: {fileID: 11400000, guid: b7ea2096121b42344a48e66a38a1d97a, type: 2}
+  InputKey: 0
   IsActive: 0
 --- !u!114 &2760948984260872835
 MonoBehaviour:
@@ -101,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityData: {fileID: 11400000, guid: 1af25dc1ea34c9b479c5d4e2bd98b404, type: 2}
+  InputKey: 0
   IsActive: 0
 --- !u!114 &4759371844890286877
 MonoBehaviour:
@@ -115,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityData: {fileID: 11400000, guid: aad9439331011754da0dfa8a1e81d45f, type: 2}
+  InputKey: 0
   IsActive: 0
 --- !u!114 &9175280300313451088
 MonoBehaviour:
@@ -129,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityData: {fileID: 11400000, guid: 360a1cbad2cc7004aba8085d92555f8b, type: 2}
+  InputKey: 0
   IsActive: 0
 --- !u!114 &6322795703736534706
 MonoBehaviour:
@@ -143,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityData: {fileID: 11400000, guid: 3ef89c9bb88bffa439060b3e421654a4, type: 2}
+  InputKey: 0
   IsActive: 0
 --- !u!114 &4900423851306346303
 MonoBehaviour:
@@ -157,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityData: {fileID: 11400000, guid: d4d9b66b6273da6439f0ae79c41def4e, type: 2}
+  InputKey: 1
   IsActive: 0
 --- !u!1 &8715896379531492988
 GameObject:

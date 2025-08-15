@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class HealthUpDrop : MonoBehaviour, IInteract, IPointerClickHandler
+public class HealthUpDrop : MonoBehaviour, IInteract
 {
     [SerializeField] private GameObject circleShader = null;
     [SerializeField] private  float rotationSpeed = 30f;
@@ -21,11 +21,6 @@ public class HealthUpDrop : MonoBehaviour, IInteract, IPointerClickHandler
         ObjectPooler.Instance.SpawnFromPool("Health Animation", transform.position, Quaternion.identity);
         GameManager.Instance.AddHealth(HealthAmount);
         this.gameObject.SetActive(false);
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Interact();
     }
 
     private void Update()

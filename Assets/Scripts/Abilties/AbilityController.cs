@@ -9,16 +9,16 @@ public class AbilityController : MonoBehaviour
     [SerializeField] private List<Ability> defaultAbilities;
 
     public Ability GetStartingAbility => abilities[0];
+    public Ability GetInteractableAbility => interactableAbility;
     public event Action<Ability> OnAbilityChanged;
 
     private System.Random _rng = new System.Random();
+    private Ability interactableAbility;
 
     private void Start()
     {
-        if (abilities != null && abilities.Count > 0)
-        {
-            ActivateAbility(abilities[0]);
-        }
+        if (abilities == null || abilities.Count <= 0) { return; }
+        ActivateAbility(abilities[0]);
     }
 
     public UpgradeOption[] GetUpgradeOptions(int count)
@@ -33,7 +33,6 @@ public class AbilityController : MonoBehaviour
         // Not enough? pad with defaults
         if (pool.Count < count)
         {
-            print("Added Defaults");
             var needed = count - pool.Count;
             pool.AddRange(Shuffle(defaultAbilities).Take(needed));
         }
@@ -71,6 +70,11 @@ public class AbilityController : MonoBehaviour
         {
             ability.ActivateAbility();
             OnAbilityChanged?.Invoke(ability);
+
+            if (ability.IsInputInteractable)
+            {
+                interactableAbility = ability;
+            }
         }
     }
 

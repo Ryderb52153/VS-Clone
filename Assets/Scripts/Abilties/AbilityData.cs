@@ -40,7 +40,7 @@ public struct Stats
     public float attackInterval;
     public int healingAmount;
     public bool isPassive;
-    
+    public bool isInputInteractable;
 
 
     public static Stats operator +(Stats statsOne, Stats otherStats)
@@ -58,6 +58,7 @@ public struct Stats
         baseStats.attackInterval = statsOne.attackInterval + otherStats.attackInterval;
         baseStats.healingAmount = statsOne.healingAmount + otherStats.healingAmount;
         baseStats.isPassive = statsOne.isPassive;
+        baseStats.isInputInteractable = statsOne.isInputInteractable;
 
         return baseStats;
     }
