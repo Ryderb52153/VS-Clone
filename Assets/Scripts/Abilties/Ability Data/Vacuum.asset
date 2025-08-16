@@ -17,38 +17,38 @@ MonoBehaviour:
   baseStats:
     nameText: Vacuum
     descriptionText: Mouse Click to pick up an area of pick ups
-    moveSpeed: 0
+    moveSpeed: 4
     cooldown: 20
-    damage: 0
+    damage: 12
     damageVariance: 0
-    lifeSpan: 0
+    lifeSpan: 20
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 1
   LevelUpStats:
   - nameText: Vacuum 2
-    descriptionText: Mouse Click to pick up an area of pick ups
-    moveSpeed: 0
+    descriptionText: Bigger Radius + speed
+    moveSpeed: 2
     cooldown: 0
-    damage: 0
+    damage: 3
     damageVariance: 0
     lifeSpan: 0
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
-    isInputInteractable: 0
+    isInputInteractable: 1
   - nameText: Vacuum 3
-    descriptionText: Mouse Click to pick up an area of pick ups
+    descriptionText: Bigger Radius
     moveSpeed: 0
     cooldown: 0
-    damage: 0
+    damage: 3
     damageVariance: 0
     lifeSpan: 0
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
-    isInputInteractable: 0
+    isInputInteractable: 1
   - nameText: Vacuum 4
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
-    isInputInteractable: 0
+    isInputInteractable: 1
   - nameText: Vacuum 5
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
-    isInputInteractable: 0
+    isInputInteractable: 1
   - nameText: Vacuum 6
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
-    isInputInteractable: 0
+    isInputInteractable: 1
   - nameText: Vacuum 7
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
-    isInputInteractable: 0
+    isInputInteractable: 1
   - nameText: Vacuum 8
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 0
@@ -103,4 +103,4 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
-    isInputInteractable: 0
+    isInputInteractable: 1

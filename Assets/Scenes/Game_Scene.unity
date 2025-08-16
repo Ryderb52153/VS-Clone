@@ -4962,7 +4962,7 @@ MonoBehaviour:
     size: 15
   - tag: Experience
     prefab: {fileID: 8129520009813156448, guid: e0e42e96238a8c9449bddc0ad0d092f3, type: 3}
-    size: 15
+    size: 75
   - tag: Defense Ball
     prefab: {fileID: 5228865198571242631, guid: 3eff61c6e1b16bd4aaabf24354686aef, type: 3}
     size: 15
@@ -4984,6 +4984,9 @@ MonoBehaviour:
   - tag: Health Animation
     prefab: {fileID: 4210018187164888401, guid: e9d2906d2556c1d41879da0a563eb9e7, type: 3}
     size: 3
+  - tag: Vacuum Ability
+    prefab: {fileID: 4899662905646213268, guid: d62c1b7e563977443a9691bcb09d30f1, type: 3}
+    size: 1
 --- !u!4 &1864801926
 Transform:
   m_ObjectHideFlags: 0

@@ -8,6 +8,11 @@ public class VacuumPU : Ability
     private void Awake()
     {
         myCamera = Camera.main;
+
+        if (AbilityData == null) { return; }
+
+        currentStats = AbilityData.GetBaseStats;
+        nextLevelStats = AbilityData.GetBaseStats;
     }
 
     public override void Interact()
@@ -34,9 +39,15 @@ public class VacuumPU : Ability
     {
         base.Attack();
 
-        // Spawn a object at the mouse position
         Vector3 mousePosition = myCamera.ScreenToWorldPoint(Input.mousePosition);
-        GameObject gameObject = ObjectPooler.Instance.SpawnFromPool("Vacuum Ability", mousePosition, transform.rotation);
+        mousePosition.z = 0;
+        VacuumBehaviour vacuumBehaviour = 
+            ObjectPooler.Instance.SpawnFromPool("Vacuum Ability", mousePosition, transform.rotation).GetComponent<VacuumBehaviour>();
+
+        vacuumBehaviour.SetHoldRadius = .35f;
+        vacuumBehaviour.SetLifeSpane = currentStats.lifeSpan;
+        vacuumBehaviour.SetPullSpeed = currentStats.moveSpeed;
+        vacuumBehaviour.SetRadius(currentStats.damage);
 
         isReady = false;
     }
