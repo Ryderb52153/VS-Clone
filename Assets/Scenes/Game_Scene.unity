@@ -4985,7 +4985,7 @@ MonoBehaviour:
     prefab: {fileID: 4210018187164888401, guid: e9d2906d2556c1d41879da0a563eb9e7, type: 3}
     size: 3
   - tag: Vacuum Ability
-    prefab: {fileID: 4899662905646213268, guid: d62c1b7e563977443a9691bcb09d30f1, type: 3}
+    prefab: {fileID: 7692232646649501415, guid: 7c59e49ac8ae1b745912690150fdefe3, type: 3}
     size: 1
 --- !u!4 &1864801926
 Transform:

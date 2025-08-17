@@ -1,9 +1,14 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class VacuumBehaviour : MonoBehaviour
 {
+    [SerializeField] private GameObject circleShader = null;
+    [SerializeField] private float rotationSpeed = 30f;
+
+    private Material circleMaterial;
+    private float rotationValue = 0f;
+
     private float holdRadius = 0.35f;
     private float pullSpeed = 4f;
     private float lifeSpan = 20f;
@@ -22,6 +27,7 @@ public class VacuumBehaviour : MonoBehaviour
         collider2d = GetComponent<CircleCollider2D>();
         collider2d.isTrigger = true;
         nearbyExp = new List<ExperienceDrop>();
+        circleMaterial = circleShader.GetComponent<SpriteRenderer>().material;
     }
 
     private void FixedUpdate()
@@ -42,6 +48,19 @@ public class VacuumBehaviour : MonoBehaviour
                 exp.transform.position = next;
             }
         }
+
+        if (circleMaterial == null) { return; }
+
+        RotateShader();
+    }
+
+    private void RotateShader()
+    {
+        rotationValue += rotationSpeed * Time.fixedDeltaTime;
+
+        if (rotationValue > 360f) rotationValue -= 360f;
+
+        circleMaterial.SetFloat("_Rotation", rotationValue);
     }
 
     private void OnTick(object sender, TimeTickSystem.OnTickEventArgs e)
