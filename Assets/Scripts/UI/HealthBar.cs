@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Slider healthBar = null;
     [SerializeField] private TextMeshProUGUI healthAmountText = null;
 
-    PlayerStats playerStats;
+    private PlayerStats playerStats;
 
     private void Start()
     {
@@ -23,7 +23,10 @@ public class HealthBar : MonoBehaviour
 
     private void HealthUpdate(int maxHealth, int currentHealth)
     {
-        healthBar.value = Mathf.Clamp01((float)currentHealth / maxHealth);
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        float percent = (float)currentHealth / maxHealth;
+        percent = Mathf.Round(percent * 100) / 100f;
+        healthBar.value = percent;
         healthAmountText.text = $"{currentHealth}/{maxHealth}";
     }
 

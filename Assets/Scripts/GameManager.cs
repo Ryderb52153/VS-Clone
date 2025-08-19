@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Player player = null;
 
     public static GameManager Instance;
+    public bool isPaused = false;
 
     public delegate void EndGameDelegate();
     public delegate void GameOverDelegate();
@@ -29,11 +30,13 @@ public class GameManager : MonoBehaviour
 
     private void PauseGame()
     {
+        isPaused = true;
         Time.timeScale = 0;
     }
 
     public void UnpauseGame()
     {
+        isPaused = false;
         Time.timeScale = 1;
     }
 

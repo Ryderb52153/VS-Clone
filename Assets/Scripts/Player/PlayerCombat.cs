@@ -16,7 +16,8 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.TryGetComponent<IInteract>(out IInteract component))
+
+        if (collision.TryGetComponent<IInteract>(out IInteract component))
         {
             component.Interact();
         }

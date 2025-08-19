@@ -7,11 +7,13 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerMovement movement = null;
     [SerializeField] private PlayerCombat combat = null;
     [SerializeField] private AbilityController abilityController = null;
+    [SerializeField] private PlayerInput playerInput = null;
 
     public PlayerStats Stats { get { return stats; } }
     public PlayerMovement Movement { get { return movement; } }
     public PlayerCombat Combat { get { return combat; } }
     public AbilityController AbilityController { get { return abilityController; } }
+    public PlayerInput GetPlayerInput { get { return playerInput; } }
 
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour
 
     public void OnLeftClick(InputAction.CallbackContext value)
     {
+        if (GameManager.Instance.isPaused) { return; }
         if (!value.performed) { return; }
         if (abilityController.GetInteractableAbility == null) { return; }
 
