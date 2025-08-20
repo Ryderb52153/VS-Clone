@@ -4,18 +4,16 @@ using UnityEngine;
 public class VacuumBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject circleShader = null;
+    [SerializeField] private ParticleSystem vacuumParticleSystem = null;
     [SerializeField] private float rotationSpeed = 30f;
+
 
     private Material circleMaterial;
     private float rotationValue = 0f;
-
     private float holdRadius = 0.35f;
     private float pullSpeed = 4f;
     private float lifeSpan = 20f;
 
-    public float SetHoldRadius { set => holdRadius = value; }
-    public float SetPullSpeed { set => pullSpeed = value; }
-    public float SetLifeSpane { set => lifeSpan = value; }
     public void SetRadius(float radius) { collider2d.radius = radius; }
 
     private float timeRemaining;
@@ -28,6 +26,15 @@ public class VacuumBehaviour : MonoBehaviour
         collider2d.isTrigger = true;
         nearbyExp = new List<ExperienceDrop>();
         circleMaterial = circleShader.GetComponent<SpriteRenderer>().material;
+    }
+
+    public void SetVacuumDetails(Stats stats)
+    {
+        holdRadius = .15f;
+        lifeSpan = stats.lifeSpan;
+        pullSpeed = stats.moveSpeed;
+        SetRadius(stats.damage);
+        SetParticleSystemDetails();
     }
 
     private void FixedUpdate()
@@ -81,6 +88,17 @@ public class VacuumBehaviour : MonoBehaviour
         {
             nearbyExp.Add(experience);
         }
+    }
+
+    private void SetParticleSystemDetails()
+    {
+        if (!vacuumParticleSystem) { return; }
+
+        var shape = vacuumParticleSystem.shape;
+        shape.enabled = true;
+        shape.shapeType = ParticleSystemShapeType.Donut;
+        shape.radius = collider2d.radius;
+        vacuumParticleSystem.Play(true);
     }
 
     private void OnEnable()

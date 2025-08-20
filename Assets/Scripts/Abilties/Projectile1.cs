@@ -15,12 +15,8 @@ public class Projectile1 : Ability
         mouseWorldPos.z = 0;
         Vector3 direction = (mouseWorldPos - transform.position).normalized;
 
-        // Set Projectile details
-        square.SetSpeed = currentStats.moveSpeed;
-        square.SetLifeSpan = currentStats.lifeSpan;
-        square.SetCooldown = currentStats.cooldown;
-        square.SetDamage = currentStats.damage;
-        square.SetDirection = direction;
+        // Set Projectile details and start
+        square.SetProjectileStats(currentStats, direction);
         square.StartProjectile();
     }
 }

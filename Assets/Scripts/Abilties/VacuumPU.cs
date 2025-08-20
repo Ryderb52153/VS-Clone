@@ -44,11 +44,7 @@ public class VacuumPU : Ability
         VacuumBehaviour vacuumBehaviour = 
             ObjectPooler.Instance.SpawnFromPool("Vacuum Ability", mousePosition, transform.rotation).GetComponent<VacuumBehaviour>();
 
-        vacuumBehaviour.SetHoldRadius = .35f;
-        vacuumBehaviour.SetLifeSpane = currentStats.lifeSpan;
-        vacuumBehaviour.SetPullSpeed = currentStats.moveSpeed;
-        vacuumBehaviour.SetRadius(currentStats.damage);
-
+        vacuumBehaviour.SetVacuumDetails(currentStats);
         isReady = false;
     }
 }

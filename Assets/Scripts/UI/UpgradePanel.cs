@@ -19,12 +19,7 @@ public class UpgradePanel : MonoBehaviour
         abilityController = GameManager.Instance.Player.AbilityController;
         playerstats.LevelUp += ShowUpgradePanel;
         abilityController.OnAbilityChanged += abilityRanksUI.SetRank;
-    }
-
-    private void OnDestroy()
-    {
-        if (playerstats != null) playerstats.LevelUp -= ShowUpgradePanel;
-        if (abilityController != null) abilityController.OnAbilityChanged -= abilityRanksUI.SetRank;
+        abilityRanksUI.SetRank(abilityController.GetStartingAbility);
     }
 
     private void ShowUpgradePanel()
@@ -76,5 +71,11 @@ public class UpgradePanel : MonoBehaviour
         {
             upgradeButtons[i].onClick.RemoveAllListeners();
         }
+    }
+
+    private void OnDestroy()
+    {
+        if (playerstats != null) playerstats.LevelUp -= ShowUpgradePanel;
+        if (abilityController != null) abilityController.OnAbilityChanged -= abilityRanksUI.SetRank;
     }
 }

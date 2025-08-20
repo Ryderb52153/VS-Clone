@@ -11,10 +11,7 @@ public class DefenseBall : Ability
         gameObject.transform.SetParent(transform);
         DefenseBallBehaviour defenseBallBehaviour = gameObject.GetComponent<DefenseBallBehaviour>();
 
-        defenseBallBehaviour.SetSpeed = currentStats.moveSpeed;
-        defenseBallBehaviour.SetCooldown = currentStats.cooldown;
-        defenseBallBehaviour.SetDamage = currentStats.damage;
-        defenseBallBehaviour.SetLifeSpan = currentStats.lifeSpan;
+        defenseBallBehaviour.SetProjectileStats(currentStats, new Vector3(0,0,0));
         defenseBallBehaviour.StartProjectile();
     }
 }

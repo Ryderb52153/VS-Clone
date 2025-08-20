@@ -7,20 +7,17 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerMovement movement = null;
     [SerializeField] private PlayerCombat combat = null;
     [SerializeField] private AbilityController abilityController = null;
-    [SerializeField] private PlayerInput playerInput = null;
 
     public PlayerStats Stats { get { return stats; } }
     public PlayerMovement Movement { get { return movement; } }
     public PlayerCombat Combat { get { return combat; } }
     public AbilityController AbilityController { get { return abilityController; } }
-    public PlayerInput GetPlayerInput { get { return playerInput; } }
 
     private void Awake()
     {
         movement.MoveSpeed = Stats.MoveSpeed;
         combat.Stats = Stats;
     }
-
 
     //Input System Events
     public void OnMovement(InputAction.CallbackContext value)
@@ -38,7 +35,6 @@ public class Player : MonoBehaviour
         abilityController.GetInteractableAbility.Interact();
     }
 }
-
 
 public enum InputKey
 {

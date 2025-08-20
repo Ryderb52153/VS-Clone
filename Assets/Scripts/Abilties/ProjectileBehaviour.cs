@@ -8,13 +8,16 @@ public class ProjectileBehaviour : MonoBehaviour
     protected float damage;
     protected float lifeSpan;
 
-    public float SetCooldown { set { cooldown = value; } }
-    public Vector3 SetDirection { set { direction = value; } }
-    public float SetSpeed { set { speed = value; } }
-    public float SetDamage { set { damage = value; } }
-    public float SetLifeSpan { set { lifeSpan = value; } }
-
     private float timeRemaining;
+
+    public void SetProjectileStats(Stats stats, Vector3 projectileDirection)
+    {
+        speed = stats.moveSpeed;
+        lifeSpan = stats.lifeSpan;
+        cooldown = stats.cooldown;
+        damage = stats.damage;
+        direction = projectileDirection;
+    }
 
     public void StartProjectile()
     {
