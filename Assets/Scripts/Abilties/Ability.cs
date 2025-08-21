@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ public abstract class Ability : MonoBehaviour
     public Sprite GetSprite { get => AbilityData.GetSprite; }
     public bool IsActive { get; set; } = false;
     public bool IsInputInteractable { get => currentStats.isInputInteractable; }
+    public event Action<Ability, float> OnAbilityUsed;
 
     private void Awake()
     {
@@ -83,7 +85,7 @@ public abstract class Ability : MonoBehaviour
     {
         cooldownRemaining--;
 
-        if (cooldownRemaining < 0)
+        if (cooldownRemaining <= 0)
         {
             if (currentStats.attackInterval > 1)
                 StartCoroutine(AttackIntervalCoroutine());
@@ -104,6 +106,7 @@ public abstract class Ability : MonoBehaviour
     protected virtual void Attack()
     {
         cooldownRemaining = currentStats.cooldown;
+        OnAbilityUsed.Invoke(this, currentStats.cooldown);
     }
 
     private void OnDestroy()

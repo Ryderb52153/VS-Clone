@@ -5,7 +5,7 @@ public class TimeTickSystem : MonoBehaviour
 {
     public static event EventHandler<OnTickEventArgs> OnTick;
 
-    private const float TICK_TIMER_MAX = .2f;
+    private const float TICK_TIMER_MAX = 1f;
 
     public class OnTickEventArgs : EventArgs
     {
