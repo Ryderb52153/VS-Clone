@@ -76,9 +76,15 @@ public class AbilityRanksUI : MonoBehaviour
     {
         if (!ui.cooldownOverlay) yield break;
 
+        ui.cooldownOverlay.gameObject.SetActive(true);
         ui.cooldownOverlay.enabled = true;
         ui.cooldownOverlay.fillAmount = 1f;
-        if (ui.countdownText) ui.countdownText.enabled = true;
+
+        if (ui.countdownText)
+        {
+            ui.countdownText.gameObject.SetActive(true);
+            ui.countdownText.enabled = true;
+        }
 
         float timeDuration = durationSeconds;
 

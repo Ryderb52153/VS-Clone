@@ -7,12 +7,11 @@ public class VacuumBehaviour : MonoBehaviour
     [SerializeField] private ParticleSystem vacuumParticleSystem = null;
     [SerializeField] private float rotationSpeed = 30f;
 
-
     private Material circleMaterial;
     private float rotationValue = 0f;
     private float holdRadius = 0.35f;
     private float pullSpeed = 4f;
-    private float lifeSpan = 20f;
+    private float lifeSpan = 6f;
 
     public void SetRadius(float radius) { collider2d.radius = radius; }
 

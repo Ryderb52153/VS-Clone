@@ -84,14 +84,20 @@ public abstract class Ability : MonoBehaviour
     protected virtual void OnTick(object sender, TimeTickSystem.OnTickEventArgs e)
     {
         cooldownRemaining--;
+        if (cooldownRemaining > 0) return;
 
-        if (cooldownRemaining <= 0)
-        {
-            if (currentStats.attackInterval > 1)
-                StartCoroutine(AttackIntervalCoroutine());
-            else if (currentStats.attackInterval == 1)
-                Attack();
-        }
+        if (currentStats.attackInterval > 1)
+            StartCoroutine(AttackIntervalCoroutine());
+        else if (currentStats.attackInterval == 1)
+            Attack();
+
+        PutAbilityOnCooldown();
+    }
+
+    protected void PutAbilityOnCooldown()
+    {
+        cooldownRemaining = currentStats.cooldown;
+        OnAbilityUsed.Invoke(this, currentStats.cooldown);
     }
 
     IEnumerator AttackIntervalCoroutine()
@@ -105,8 +111,7 @@ public abstract class Ability : MonoBehaviour
 
     protected virtual void Attack()
     {
-        cooldownRemaining = currentStats.cooldown;
-        OnAbilityUsed.Invoke(this, currentStats.cooldown);
+
     }
 
     private void OnDestroy()

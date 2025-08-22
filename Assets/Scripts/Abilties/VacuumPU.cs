@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class VacuumPU : Ability
 {
-    private bool isReady = false;
+    private bool isReady = true;
     private Camera myCamera;
 
     private void Awake()
@@ -37,8 +37,6 @@ public class VacuumPU : Ability
 
     protected override void Attack()
     {
-        base.Attack();
-
         Vector3 mousePosition = myCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
         VacuumBehaviour vacuumBehaviour = 
@@ -46,5 +44,6 @@ public class VacuumPU : Ability
 
         vacuumBehaviour.SetVacuumDetails(currentStats);
         isReady = false;
+        PutAbilityOnCooldown();
     }
 }

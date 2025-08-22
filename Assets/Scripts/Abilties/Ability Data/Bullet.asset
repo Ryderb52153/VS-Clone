@@ -18,13 +18,14 @@ MonoBehaviour:
     nameText: Bullet
     descriptionText: Fires Random Bullets
     moveSpeed: 7
-    cooldown: 10
+    cooldown: 3
     damage: 6
     damageVariance: 2
     lifeSpan: 8
     attackInterval: 1
     healingAmount: 0
     isPassive: 0
+    isInputInteractable: 0
   LevelUpStats:
   - nameText: Bullet Level 2
     descriptionText: +Damage and -Cooldown
@@ -36,6 +37,7 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
+    isInputInteractable: 0
   - nameText: Bullet Level 3
     descriptionText: +Damage and -Cooldown and more shots
     moveSpeed: 1
@@ -46,6 +48,7 @@ MonoBehaviour:
     attackInterval: 1
     healingAmount: 0
     isPassive: 0
+    isInputInteractable: 0
   - nameText: Bullet Level 4
     descriptionText: +Damage and -Cooldown and more shots
     moveSpeed: 1
@@ -56,6 +59,7 @@ MonoBehaviour:
     attackInterval: 1
     healingAmount: 0
     isPassive: 0
+    isInputInteractable: 0
   - nameText: Bullet Level 5
     descriptionText: +Damage and -Cooldown
     moveSpeed: 0
@@ -66,6 +70,7 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
+    isInputInteractable: 0
   - nameText: Bullet Level 6
     descriptionText: +Damage and -Cooldown
     moveSpeed: 2
@@ -76,6 +81,7 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
+    isInputInteractable: 0
   - nameText: Bullet Level 7
     descriptionText: +Damage and -Cooldown
     moveSpeed: 1
@@ -86,6 +92,7 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
+    isInputInteractable: 0
   - nameText: Bullet Level 8
     descriptionText: +Damage and -Cooldown
     moveSpeed: 1
@@ -96,3 +103,4 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
+    isInputInteractable: 0

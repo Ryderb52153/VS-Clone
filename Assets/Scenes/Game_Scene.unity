@@ -834,7 +834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &316848081
 RectTransform:
   m_ObjectHideFlags: 0
@@ -910,7 +910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &365687335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3217,19 +3217,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPhases:
-  - spawnCooldown: 10
+  - spawnCooldown: 5
     enemyTypes:
     - Enemy Triangle
-  - spawnCooldown: 10
+  - spawnCooldown: 5
     enemyTypes:
     - Enemy Triangle
     - Enemy Purple
-  - spawnCooldown: 10
+  - spawnCooldown: 5
     enemyTypes:
     - Enemy Triangle
     - Enemy Purple
     - Enemy Red
-  - spawnCooldown: 10
+  - spawnCooldown: 5
     enemyTypes:
     - Enemy Triangle
     - Enemy Triangle
@@ -4348,7 +4348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1277338659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4760,7 +4760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1472127652
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4836,7 +4836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1505745494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5037,7 +5037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1540487082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5496,6 +5496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1685008752}
   - component: {fileID: 1685008751}
+  - component: {fileID: 1685008753}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -5532,6 +5533,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1685008753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685008750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6d1d7bf9aa4274ea74a75a339d083c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 7532dba2a1348604a9bf3138f0bd2d93, type: 3}
+  clickPoint: {x: 0, y: 0}
+  cursorMode: 0
 --- !u!1 &1708989233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5762,7 +5778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1822886272
 RectTransform:
   m_ObjectHideFlags: 0

@@ -18,10 +18,10 @@ MonoBehaviour:
     nameText: Vacuum
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 4
-    cooldown: 20
+    cooldown: 25
     damage: 12
     damageVariance: 0
-    lifeSpan: 20
+    lifeSpan: 6
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
