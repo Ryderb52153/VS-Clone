@@ -74,6 +74,7 @@ public class AbilityController : MonoBehaviour
             if (ability.IsInputInteractable)
             {
                 interactableAbility = ability;
+                GameManager.Instance.ChangeCursor(CursorType.Target);
             }
         }
     }

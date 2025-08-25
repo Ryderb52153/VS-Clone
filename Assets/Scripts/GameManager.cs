@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Player player = null;
+    [SerializeField] private CursorManager cursorManager = null;
 
     public static GameManager Instance;
     public bool isPaused = false;
@@ -59,6 +60,11 @@ public class GameManager : MonoBehaviour
     public void AddHealth(int health)
     {
         player.Stats.AddHealth(health);
+    }
+
+    public void ChangeCursor(CursorType cursor)
+    {
+        cursorManager.Apply(cursor);
     }
 
     private void OnEnable()

@@ -32,6 +32,7 @@ public class VacuumPU : Ability
         if (cooldownRemaining < 0)
         {
             isReady = true;
+            GameManager.Instance.ChangeCursor(CursorType.Target);
         }
     }
 
@@ -44,6 +45,7 @@ public class VacuumPU : Ability
 
         vacuumBehaviour.SetVacuumDetails(currentStats);
         isReady = false;
+        GameManager.Instance.ChangeCursor(CursorType.Default);
         PutAbilityOnCooldown();
     }
 }

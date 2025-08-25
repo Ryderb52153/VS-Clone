@@ -3217,14 +3217,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPhases:
-  - spawnCooldown: 5
+  - spawnCooldown: 3
     enemyTypes:
     - Enemy Triangle
-  - spawnCooldown: 5
+  - spawnCooldown: 3
     enemyTypes:
     - Enemy Triangle
     - Enemy Purple
-  - spawnCooldown: 5
+  - spawnCooldown: 4
     enemyTypes:
     - Enemy Triangle
     - Enemy Purple
@@ -5517,6 +5517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 397253427}
+  cursorManager: {fileID: 1685008753}
   isPaused: 0
 --- !u!4 &1685008752
 Transform:
@@ -5545,10 +5546,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6d1d7bf9aa4274ea74a75a339d083c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 7532dba2a1348604a9bf3138f0bd2d93, type: 3}
-  cursorDefault: {fileID: 2800000, guid: c8c50504b0516d74781de3ff5c0970d8, type: 3}
-  clickPoint: {x: -3, y: 0}
-  cursorMode: 0
+  cursorConfigs:
+  - type: 0
+    texture: {fileID: 2800000, guid: c8c50504b0516d74781de3ff5c0970d8, type: 3}
+    useCenterHotspot: 1
+    customHotspot: {x: 0, y: 0}
+    cursorMode: 0
+  - type: 1
+    texture: {fileID: 2800000, guid: 720c6c80cd5e27943ab0dce514cce6ae, type: 3}
+    useCenterHotspot: 1
+    customHotspot: {x: 0, y: 0}
+    cursorMode: 0
+  defaultType: 0
 --- !u!1 &1708989233
 GameObject:
   m_ObjectHideFlags: 0

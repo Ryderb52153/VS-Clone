@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 7532dba2a1348604a9bf3138f0bd2d93
+guid: 720c6c80cd5e27943ab0dce514cce6ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4437285337888539549
-    second: crosshair120_0
+      213: -7856333952867381983
+    second: crosshairPurple_0
   - first:
-      213: -6096508303082174315
-    second: crosshair120_1
+      213: 2226980364297282653
+    second: crosshairPurple_1
   - first:
-      213: 4191707391713266347
-    second: crosshair120_2
+      213: -3793143889820643392
+    second: crosshairPurple_2
   - first:
-      213: -8051695597541282872
-    second: crosshair120_3
+      213: -6995549620977046021
+    second: crosshairPurple_3
   - first:
-      213: 728016198828101598
-    second: crosshair120_4
+      213: -5920163604593266397
+    second: crosshairPurple_4
   - first:
-      213: -3313046609540211713
-    second: crosshair120_5
+      213: -2142175776343702561
+    second: crosshairPurple_5
   - first:
-      213: 7411037488800429265
-    second: crosshair120_6
+      213: 6185929314100982059
+    second: crosshairPurple_6
   - first:
-      213: 5409959919567947710
-    second: crosshair120_7
+      213: -5906390848384709303
+    second: crosshairPurple_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,7 +78,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -134,7 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crosshair120_0
+      name: crosshairPurple_0
       rect:
         serializedVersion: 2
         x: 17
@@ -149,14 +149,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36cba14be789b62c0800000000000000
-      internalID: -4437285337888539549
+      spriteID: 12dcf7ef4e1b8f290800000000000000
+      internalID: -7856333952867381983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair120_1
+      name: crosshairPurple_1
       rect:
         serializedVersion: 2
         x: 53
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5984190cff9d46ba0800000000000000
-      internalID: -6096508303082174315
+      spriteID: d54a5bf97d2d7ee10800000000000000
+      internalID: 2226980364297282653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair120_2
+      name: crosshairPurple_2
       rect:
         serializedVersion: 2
         x: 95
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: baac2750aafeb2a30800000000000000
-      internalID: 4191707391713266347
+      spriteID: 0cf0c49aabb0c5bc0800000000000000
+      internalID: -3793143889820643392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair120_3
+      name: crosshairPurple_3
       rect:
         serializedVersion: 2
         x: 9
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8cba9f48381a24090800000000000000
-      internalID: -8051695597541282872
+      spriteID: bfd6b090fa0daee90800000000000000
+      internalID: -6995549620977046021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair120_4
+      name: crosshairPurple_4
       rect:
         serializedVersion: 2
         x: 119
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: edf01e920ee6a1a00800000000000000
-      internalID: 728016198828101598
+      spriteID: 321b508619a57dda0800000000000000
+      internalID: -5920163604593266397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair120_5
+      name: crosshairPurple_5
       rect:
         serializedVersion: 2
         x: 17
@@ -259,14 +259,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ffb1b0279a1b502d0800000000000000
-      internalID: -3313046609540211713
+      spriteID: fd3469c2b767542e0800000000000000
+      internalID: -2142175776343702561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair120_6
+      name: crosshairPurple_6
       rect:
         serializedVersion: 2
         x: 53
@@ -281,14 +281,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d47d09a45b49d660800000000000000
-      internalID: 7411037488800429265
+      spriteID: b213aaccfe5d8d550800000000000000
+      internalID: 6185929314100982059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair120_7
+      name: crosshairPurple_7
       rect:
         serializedVersion: 2
         x: 95
@@ -303,8 +303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb7c2f632e9041b40800000000000000
-      internalID: 5409959919567947710
+      spriteID: 94d496911d8480ea0800000000000000
+      internalID: -5906390848384709303
       vertices: []
       indices: 
       edges: []
@@ -322,15 +322,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      crosshair120_0: -4437285337888539549
-      crosshair120_1: -6096508303082174315
-      crosshair120_2: 4191707391713266347
-      crosshair120_3: -8051695597541282872
-      crosshair120_4: 728016198828101598
-      crosshair120_5: -3313046609540211713
-      crosshair120_6: 7411037488800429265
-      crosshair120_7: 5409959919567947710
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
