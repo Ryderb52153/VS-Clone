@@ -5546,7 +5546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 7532dba2a1348604a9bf3138f0bd2d93, type: 3}
-  clickPoint: {x: 0, y: 0}
+  cursorDefault: {fileID: 2800000, guid: c8c50504b0516d74781de3ff5c0970d8, type: 3}
+  clickPoint: {x: -3, y: 0}
   cursorMode: 0
 --- !u!1 &1708989233
 GameObject:
