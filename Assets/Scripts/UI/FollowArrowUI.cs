@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 
-public class CompassArrow : MonoBehaviour
+public class FollowArrowUI : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private RectTransform arrowUI; // your UI Image/RectTransform
-    [SerializeField] private Transform player;      // player/world origin
-    [SerializeField] private Transform target;      // destination (e.g., chest)
-
+    [SerializeField] private RectTransform arrowUI; 
+    [SerializeField] private Transform player;     
+    [SerializeField] private Transform target;      
 
     private void Update()
     {

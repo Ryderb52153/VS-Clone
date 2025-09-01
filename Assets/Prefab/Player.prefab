@@ -262,7 +262,6 @@ MonoBehaviour:
   movement: {fileID: 4276389020115064977}
   combat: {fileID: 2132383700203930714}
   abilityController: {fileID: 8905535942286688373}
-  playerInput: {fileID: 2611086577750036210}
 --- !u!114 &4276389020115064977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,7 +393,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
