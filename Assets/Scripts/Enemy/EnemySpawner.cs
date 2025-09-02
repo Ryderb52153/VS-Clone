@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.endGameDelegate = SpawnEndGame;
-        GameManager.Instance.Player.Stats.LevelUp += PlayerLeveledUP;
+        GameManager.Instance.Player.Stats.LevelUp += IncreasePhase;
     }
 
     private void TimeTick(object sender, TimeTickSystem.OnTickEventArgs e)
@@ -26,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
         cooldownRemaining = CurrentPhase.spawnCooldown;
     }
 
-    private void PlayerLeveledUP()
+    private void IncreasePhase()
     {
         if (currentPhaseIndex > spawnPhases.Count - 2) { return; }
         currentPhaseIndex++;
@@ -60,14 +60,14 @@ public class EnemySpawner : MonoBehaviour
     private void OnEnable()
     {
         if (GameManager.Instance != null) 
-            GameManager.Instance.Player.Stats.LevelUp += PlayerLeveledUP;
+            GameManager.Instance.Player.Stats.LevelUp += IncreasePhase;
 
         TimeTickSystem.OnTick += TimeTick;
     }
 
     private void OnDisable()
     {
-        GameManager.Instance.Player.Stats.LevelUp -= PlayerLeveledUP;
+        GameManager.Instance.Player.Stats.LevelUp -= IncreasePhase;
         TimeTickSystem.OnTick -= TimeTick;
     }
 }

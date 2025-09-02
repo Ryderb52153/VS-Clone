@@ -3281,7 +3281,7 @@ MonoBehaviour:
     - Enemy Triangle
     - Enemy Triangle
     - Enemy Red
-  - spawnCooldown: 5
+  - spawnCooldown: 2
     enemyTypes:
     - Enemy Triangle
     - Enemy Red

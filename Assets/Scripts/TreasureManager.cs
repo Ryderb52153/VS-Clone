@@ -50,7 +50,12 @@ public class TreasureManager : MonoBehaviour
         var points = new List<Transform>(spawnPoints);
         if (shuffleSpawns) FisherYates(points);
 
+        SpawnChests(points);
+        ActivateNext();
+    }
 
+    private void SpawnChests(List<Transform> points)
+    {
         int count = treasuresToSpawn;
 
         for (int i = 0; i < count; i++)
@@ -71,8 +76,6 @@ public class TreasureManager : MonoBehaviour
             chest.Opened += HandleChestOpened;
             chests.Add(chest);
         }
-
-        ActivateNext();
     }
 
     private void ActivateNext()
@@ -91,8 +94,6 @@ public class TreasureManager : MonoBehaviour
 
     private void HandleChestOpened(TreasureChest chest)
     {
-        // Optional: immediately hide/cleanup the opened chest
-        if (chest) chest.gameObject.SetActive(false);
         ActivateNext();
     }
 
