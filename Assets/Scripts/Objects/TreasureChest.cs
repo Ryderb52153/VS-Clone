@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class TreasureChest : MonoBehaviour
@@ -8,6 +9,8 @@ public class TreasureChest : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private bool isopen = false;
+
+    public event Action<TreasureChest> Opened;
 
     private void Awake()
     {
@@ -21,9 +24,15 @@ public class TreasureChest : MonoBehaviour
 
         if (collision.transform.tag == "Player")
         {
-            isopen = true;
-            openSparkleEffects.Play();
-            spriteRenderer.sprite = chestOpenSprite;
+            OpenChest();
         }
+    }
+
+    private void OpenChest()
+    {
+        isopen = true;
+        openSparkleEffects.Play();
+        Opened?.Invoke(this);
+        spriteRenderer.sprite = chestOpenSprite;
     }
 }
