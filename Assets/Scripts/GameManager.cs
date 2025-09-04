@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Player player = null;
     [SerializeField] private CursorManager cursorManager = null;
-    
+    [SerializeField] private GameObject endGameScreen;
+
     public static GameManager Instance;
     public bool isPaused = false;
 
@@ -31,7 +33,20 @@ public class GameManager : MonoBehaviour
 
     public void AllChestsOpened()
     {
-        print("Win the level");
+        PauseGame();
+        ShowEndGameScreen();
+    }
+
+    private void ShowEndGameScreen()
+    {
+        if (endGameScreen != null)
+            endGameScreen.SetActive(true);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Main_Menu_Scene");
     }
 
     private void PauseGame()
