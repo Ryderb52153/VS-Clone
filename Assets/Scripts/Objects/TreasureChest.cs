@@ -34,5 +34,13 @@ public class TreasureChest : MonoBehaviour
         openSparkleEffects.Play();
         Opened?.Invoke(this);
         spriteRenderer.sprite = chestOpenSprite;
+        SaveOpenChest();
+    }
+
+    private void SaveOpenChest()
+    {
+        int currentChests = PlayerPrefs.GetInt("ChestsOpened", 0);
+        PlayerPrefs.SetInt("ChestsOpened", currentChests + 1);
+        PlayerPrefs.Save();
     }
 }

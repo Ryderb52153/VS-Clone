@@ -24,16 +24,17 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
 
         if (currentEnemyHealth <= 0)
         {
-            gameObject.SetActive(false);
-            GameManager.Instance.ActiveEnemies.Remove(this.gameObject);
-            currentEnemyHealth = enemyHealth;
+            Death();
+        }
+    }
 
-            DropExpOrHealth();
-        }
-        else
-        {
-            //print("Health Remaining : " + currentEnemyHealth);
-        }
+    private void Death()
+    {
+        gameObject.SetActive(false);
+        GameManager.Instance.ActiveEnemies.Remove(this.gameObject);
+        currentEnemyHealth = enemyHealth;
+        DropExpOrHealth();
+        RecordKill();
     }
 
     private void DropExpOrHealth()
@@ -52,5 +53,12 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
                 SpawnFromPool("Experience", transform.position, transform.rotation).GetComponent<ExperienceDrop>();
             experience.ExperienceWorth = experienceWorth;
         }
+    }
+
+    private void RecordKill()
+    {
+        int currentKills = PlayerPrefs.GetInt("EnemiesKilled", 0);
+        PlayerPrefs.SetInt("EnemiesKilled", currentKills + 1);
+        PlayerPrefs.Save();
     }
 }

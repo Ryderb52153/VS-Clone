@@ -9,20 +9,18 @@ public class ScoreUI : MonoBehaviour
 
     private int currentScore = 0;
 
-    
-
     private void Start()
     {
         playerStats = GameManager.Instance.Player.Stats;
         playerStats.PointUpdate += ScoreUpdate;
-        GameManager.Instance.gameOverDelegate += SavePlayerScore;
+        GameManager.Instance.gameOverDelegate += RecordPlayerScore;
     }
 
-    private void SavePlayerScore()
+    private void RecordPlayerScore()
     {
-        PlayerPrefs.SetInt("TotalScore", currentScore);
+        int currentSavedScore = PlayerPrefs.GetInt("TotalScore", 0);
+        PlayerPrefs.SetInt("TotalScore", currentSavedScore + currentScore);
         PlayerPrefs.Save();
-        print("New Total Score: " + currentScore);
     }
 
     private void ScoreUpdate(int points)
