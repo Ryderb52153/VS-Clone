@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Player player = null;
     [SerializeField] private CursorManager cursorManager = null;
-    [SerializeField] private GameObject endGameScreen;
 
     public static GameManager Instance;
     public bool isPaused = false;
@@ -29,18 +28,6 @@ public class GameManager : MonoBehaviour
             Instance = this;
         else
             Destroy(this);
-    }
-
-    public void AllChestsOpened()
-    {
-        PauseGame();
-        ShowEndGameScreen();
-    }
-
-    private void ShowEndGameScreen()
-    {
-        if (endGameScreen != null)
-            endGameScreen.SetActive(true);
     }
 
     public void ReturnToMainMenu()
