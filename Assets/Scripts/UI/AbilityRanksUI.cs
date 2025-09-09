@@ -6,18 +6,16 @@ using UnityEngine.UI;
 
 public class AbilityRanksUI : MonoBehaviour
 {
-    [SerializeField] private Image[] rankImages = null;
-    [SerializeField] private TextMeshProUGUI[] rankTexts = null;
-    [SerializeField] private Image[] cooldownOverlays = null;
-    [SerializeField] private TextMeshProUGUI[] cooldownTexts = null;
+    [SerializeField] private UIData[] abilitiesRankUi = null;
 
     private Dictionary<Ability, UIData> abilityUIMap = new Dictionary<Ability, UIData>();
     private int nextAvailableIndex = 0;
 
+    [System.Serializable]
     private struct UIData
     {
         public Image image;
-        public TextMeshProUGUI rankText;
+        public RankBoxes rankBoxes;
         public Image cooldownOverlay;
         public TextMeshProUGUI countdownText;
         public Coroutine cooldownCo;
@@ -33,7 +31,7 @@ public class AbilityRanksUI : MonoBehaviour
             ui = abilityUIMap[ability];
 
         ui.image.sprite = ability.GetSprite;
-        ui.rankText.text = ability.GetCurrentLevel.ToString();
+        ui.rankBoxes.SetRankAmount(ability.GetCurrentLevel);
     }
 
     public void TriggerCooldown(Ability ability, float durationSeconds)
@@ -50,26 +48,18 @@ public class AbilityRanksUI : MonoBehaviour
 
     private UIData RegisterAbilityUI(Ability ability)
     {
-        if (nextAvailableIndex >= rankImages.Length || nextAvailableIndex >= rankTexts.Length)
+        if (nextAvailableIndex >= abilitiesRankUi.Length || nextAvailableIndex >= abilitiesRankUi.Length)
         {
             Debug.LogError("No more available UI slots for abilities.");
             return new UIData();
         }
 
-        UIData data = new UIData
-        {
-            image = rankImages[nextAvailableIndex],
-            rankText = rankTexts[nextAvailableIndex],
-            cooldownOverlay = cooldownOverlays[nextAvailableIndex],
-            countdownText = cooldownTexts[nextAvailableIndex]
-        };
-
-        abilityUIMap[ability] = data;
-        abilityUIMap[ability].rankText.gameObject.SetActive(true);
-        abilityUIMap[ability].image.gameObject.SetActive(true);
+        abilityUIMap[ability] = abilitiesRankUi[nextAvailableIndex];
+        abilityUIMap[ability].rankBoxes.gameObject.SetActive(true);
+        abilityUIMap[ability].image.enabled = true;
         ability.OnAbilityUsed += TriggerCooldown;
         nextAvailableIndex++;
-        return data;
+        return abilitiesRankUi[nextAvailableIndex - 1];
     }
 
     private IEnumerator CooldownRoutine(UIData ui, float durationSeconds)
