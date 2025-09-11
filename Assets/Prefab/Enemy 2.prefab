@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 10
   enemyDamage: 2
-  enemySpeed: 1
+  enemySpeed: 2
   experienceWorth: 72
 --- !u!60 &5459223357974142984
 PolygonCollider2D:

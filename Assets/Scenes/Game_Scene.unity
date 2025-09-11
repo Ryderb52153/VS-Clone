@@ -1745,6 +1745,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307658344}
   m_CullTransparentMesh: 1
+--- !u!1 &308144547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 308144548}
+  m_Layer: 0
+  m_Name: Chest spot (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &308144548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308144547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31, y: -17.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1685008752}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &315701588
 GameObject:
   m_ObjectHideFlags: 0
@@ -5651,21 +5682,21 @@ MonoBehaviour:
   - spawnCooldown: 3
     enemyTypes:
     - Enemy Triangle
-  - spawnCooldown: 3
+  - spawnCooldown: 2
     enemyTypes:
     - Enemy Triangle
     - Enemy Purple
-  - spawnCooldown: 4
+  - spawnCooldown: 2
     enemyTypes:
     - Enemy Triangle
     - Enemy Purple
-    - Enemy Red
-  - spawnCooldown: 5
-    enemyTypes:
-    - Enemy Triangle
-    - Enemy Triangle
     - Enemy Red
   - spawnCooldown: 2
+    enemyTypes:
+    - Enemy Triangle
+    - Enemy Triangle
+    - Enemy Red
+  - spawnCooldown: 1
     enemyTypes:
     - Enemy Triangle
     - Enemy Red
@@ -9918,6 +9949,7 @@ Transform:
   - {fileID: 1601156241}
   - {fileID: 1538289693}
   - {fileID: 566039702}
+  - {fileID: 308144548}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1685008753
@@ -9962,7 +9994,7 @@ MonoBehaviour:
   - {fileID: 1601156241}
   - {fileID: 1538289693}
   - {fileID: 566039702}
-  - {fileID: 566039702}
+  - {fileID: 308144548}
   shuffleSpawns: 1
   onAllChestsOpened:
     m_PersistentCalls:
