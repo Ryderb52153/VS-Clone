@@ -274,6 +274,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb9f2f93bb1dfe49862371c71d336fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashDistance: 5
+  dashDuration: 0.12
+  dashCooldown: 1
+  dashBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2611086577750036210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +337,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: aac4eaaa-90a9-4878-9588-6ef0ec953170
     m_ActionName: 'PlayerControls/Interact[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2933259413776327738}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnDash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3f3c819b-be99-4d58-961a-009dea793b37
+    m_ActionName: 'PlayerControls/Dash[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerControls

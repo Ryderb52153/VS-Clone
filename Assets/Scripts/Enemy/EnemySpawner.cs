@@ -51,9 +51,9 @@ public class EnemySpawner : MonoBehaviour
 
     private Vector3 GetRandomPosition()
     {
-        int randomXVector = Random.Range(0, spawnXVectorRange.Length);
-        int randomYVector = Random.Range(0, 1);
-        Vector3 spawnPos = Camera.main.ViewportToWorldPoint(new Vector3(spawnXVectorRange[randomXVector], randomYVector));
+        int randomX = Random.Range(0, spawnXVectorRange.Length);
+        int randomY = Random.Range(0, 2);
+        Vector3 spawnPos = Camera.main.ViewportToWorldPoint(new Vector3(spawnXVectorRange[randomX], randomY));
         return spawnPos;
     }
 

@@ -34,6 +34,16 @@ public class Player : MonoBehaviour
 
         abilityController.GetInteractableAbility.Interact();
     }
+
+    public void OnDash(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed) return;
+        if (GameManager.Instance.isPaused) return;
+
+        Vector2 mouseScreen = Mouse.current.position.ReadValue();
+        Vector2 mouseWorld = Camera.main.ScreenToWorldPoint(mouseScreen);
+        movement.TryDashTowards(mouseWorld);
+    }
 }
 
 public enum InputKey
