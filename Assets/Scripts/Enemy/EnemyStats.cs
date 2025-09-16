@@ -12,15 +12,18 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
     public int EnemySpeed { get { return enemySpeed; } }
 
     private float currentEnemyHealth;
+    private Animator anim;
 
     private void Awake()
     {
         currentEnemyHealth = enemyHealth;
+        anim = GetComponent<Animator>();
     }
 
     public void OnHit(float damage)
     {
         currentEnemyHealth -= damage;
+        anim.SetTrigger("hit");
 
         if (currentEnemyHealth <= 0)
         {

@@ -56,7 +56,7 @@ MonoBehaviour:
     damage: 2
     damageVariance: 2
     lifeSpan: 0
-    attackInterval: 1
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
@@ -77,26 +77,26 @@ MonoBehaviour:
     cooldown: -0.5
     damage: 2
     damageVariance: 2
-    lifeSpan: 1
-    attackInterval: 0
+    lifeSpan: 0
+    attackInterval: 1
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
   - nameText: Bullet Level 7
-    descriptionText: +Damage and -Cooldown
+    descriptionText: '+Damage '
     moveSpeed: 1
-    cooldown: -0.5
+    cooldown: 0
     damage: 2
     damageVariance: 2
-    lifeSpan: 1
+    lifeSpan: 0
     attackInterval: 0
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
   - nameText: Bullet Level 8
-    descriptionText: +Damage and -Cooldown
+    descriptionText: '+Damage '
     moveSpeed: 1
-    cooldown: -0.5
+    cooldown: 0
     damage: 2
     damageVariance: 2
     lifeSpan: 1

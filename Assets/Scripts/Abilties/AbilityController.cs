@@ -12,7 +12,7 @@ public class AbilityController : MonoBehaviour
     public Ability GetInteractableAbility => interactableAbility;
     public event Action<Ability> OnAbilityChanged;
 
-    private System.Random _rng = new System.Random();
+    private System.Random rng = new System.Random();
     private Ability interactableAbility;
 
     private void Start()
@@ -24,7 +24,7 @@ public class AbilityController : MonoBehaviour
     public UpgradeOption[] GetUpgradeOptions(int count)
     {
         // Shuffle helper
-        IEnumerable<T> Shuffle<T>(IEnumerable<T> src) => src.OrderBy(_ => _rng.Next());
+        IEnumerable<T> Shuffle<T>(IEnumerable<T> src) => src.OrderBy(_ => rng.Next());
 
         var pool = abilities
             .Where(a => a.GetCurrentLevel < a.GetMaxLevel)

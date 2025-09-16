@@ -41,7 +41,7 @@ MonoBehaviour:
   - nameText: Defense Ball Level 3
     descriptionText: -Cooldown
     moveSpeed: 0
-    cooldown: -2
+    cooldown: -5
     damage: 0
     damageVariance: 0
     lifeSpan: 0
@@ -73,9 +73,9 @@ MonoBehaviour:
     isInputInteractable: 0
   - nameText: Defense Ball Level 6
     descriptionText: +Speed
-    moveSpeed: 2
+    moveSpeed: 3
     cooldown: 0
-    damage: 0
+    damage: 1
     damageVariance: 0
     lifeSpan: 0
     attackInterval: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   - nameText: Defense Ball Level 8
     descriptionText: -Cooldown and Life Span
     moveSpeed: 0
-    cooldown: -14
+    cooldown: 0
     damage: 0
     damageVariance: 0
     lifeSpan: 1
