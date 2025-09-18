@@ -5685,22 +5685,22 @@ MonoBehaviour:
   - spawnCooldown: 2
     enemyTypes:
     - Enemy Triangle
-    - Enemy Purple
+    - Enemy Tank
   - spawnCooldown: 2
     enemyTypes:
     - Enemy Triangle
-    - Enemy Purple
-    - Enemy Red
+    - Enemy Tank
+    - Enemy Eye
   - spawnCooldown: 2
     enemyTypes:
     - Enemy Triangle
     - Enemy Triangle
-    - Enemy Red
+    - Enemy Eye
   - spawnCooldown: 1
     enemyTypes:
     - Enemy Triangle
-    - Enemy Red
-    - Enemy Red
+    - Enemy Eye
+    - Enemy Eye
 --- !u!4 &985484039
 Transform:
   m_ObjectHideFlags: 0
@@ -10810,7 +10810,7 @@ MonoBehaviour:
     prefab: {fileID: 5228865198571242631, guid: 3eff61c6e1b16bd4aaabf24354686aef, type: 3}
     size: 15
   - tag: Enemy Triangle
-    prefab: {fileID: 8577565923081341760, guid: d0f0741ee899eb4479dce533601b535f, type: 3}
+    prefab: {fileID: 5709467896083734595, guid: 7d4461edee18dd54ca858c742f3cacbf, type: 3}
     size: 50
   - tag: End Game Boss
     prefab: {fileID: 3730660627247058147, guid: 6156e920b22a877408c2037cf3d09824, type: 3}
@@ -10818,11 +10818,11 @@ MonoBehaviour:
   - tag: HealthUpDrop
     prefab: {fileID: 318451995974966039, guid: 1c9046d5c14ff7c4da325563200b0cb3, type: 3}
     size: 15
-  - tag: Enemy Purple
-    prefab: {fileID: 8577565923081341760, guid: c4d3eca2fc05b4440a3eb969700e7ef9, type: 3}
+  - tag: Enemy Tank
+    prefab: {fileID: 6460590062721563413, guid: 84f4124f0ce54a141bf87fcc174f1dd4, type: 3}
     size: 50
-  - tag: Enemy Red
-    prefab: {fileID: 3793228075161339729, guid: b5f730feaff96ae499f535ac4ed6676b, type: 3}
+  - tag: Enemy Eye
+    prefab: {fileID: 6333795238785408047, guid: f1923d57c40146d42a06dd700b253401, type: 3}
     size: 50
   - tag: Health Animation
     prefab: {fileID: 4210018187164888401, guid: e9d2906d2556c1d41879da0a563eb9e7, type: 3}
