@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyStats : MonoBehaviour, ItakeDamage
@@ -7,12 +8,19 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
     [SerializeField] private int enemySpeed = 2;
     [SerializeField] private int experienceWorth = 50;
 
-    public int EnemyHealth { get { return enemyHealth; } }
-    public int EnemyDamage { get { return enemyDamage; } }
-    public int EnemySpeed { get { return enemySpeed; } }
+    [Header("Defense")]
+    [Range(0f, 1f)]
+    [SerializeField, Tooltip("0 = full KB, 1 = immune")] 
+    private float knockbackResistance = 0f;
+
+    public int EnemyHealth => enemyHealth;
+    public int EnemyDamage => enemyDamage;
+    public int EnemySpeed => enemySpeed;
+    public float KnockbackResistance => knockbackResistance;
 
     private float currentEnemyHealth;
     private Animator anim;
+    public event Action<Vector3, float> KnockedBack;
 
     private void Awake()
     {
@@ -21,6 +29,21 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
     }
 
     public void OnHit(float damage)
+    {
+        ApplyDamage(damage);
+    }
+
+    public void OnHit(float damage, Vector3 sourceWorldPos, float knockbackForce = 3.5f)
+    {
+        ApplyDamage(damage);
+
+        if (currentEnemyHealth > 0f)
+        {
+            KnockedBack?.Invoke(sourceWorldPos, knockbackForce);
+        }
+    }
+
+    private void ApplyDamage(float damage)
     {
         currentEnemyHealth -= damage;
         anim.SetTrigger("hit");
@@ -42,7 +65,7 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
 
     private void DropExpOrHealth()
     {
-        int random = Random.Range(0, 5);
+        int random = UnityEngine.Random.Range(0, 5);
 
         if (random == 0)
         {

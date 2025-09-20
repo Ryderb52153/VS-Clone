@@ -4,16 +4,35 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private EnemyStats stats = null;
 
+    [Header("Knockback")]
+    [SerializeField, Tooltip("higher = slows faster")] private float knockbackDecay = 6f;
+    [SerializeField] private float stunOnKnockback = 0.05f;
+
     private GameObject player;
+    private Vector3 knockbackVelocity = Vector3.zero;
+    private float stunTimer = 0f;
 
     private void Awake()
     {
         player = GameManager.Instance.Player.gameObject;
+        stats.KnockedBack += ApplyKnockback;
     }
 
     private void Update()
     {
-        transform.position += GetMovementIntention() * stats.EnemySpeed * Time.deltaTime;
+        Vector3 move = Vector3.zero;
+        if (stunTimer > 0f)
+        {
+            stunTimer -= Time.deltaTime;
+        }
+        else
+        {
+            move = GetMovementIntention() * stats.EnemySpeed;
+        }
+
+        Vector3 totalVelocity = move + knockbackVelocity;
+        transform.position += totalVelocity * Time.deltaTime;
+        DecayVelocity();
     }
 
     public Vector3 GetMovementIntention()
@@ -31,6 +50,17 @@ public class EnemyAI : MonoBehaviour
         }
 
         return intention.normalized;
+    }
+
+    public void ApplyKnockback(Vector3 fromWorldPos, float force)
+    {
+        Vector3 dir = (transform.position - fromWorldPos).normalized;
+
+        float resistance = Mathf.Clamp01(stats.KnockbackResistance);
+        float appliedForce = force * (1f - resistance);
+
+        knockbackVelocity += dir * appliedForce;
+        stunTimer = Mathf.Max(stunTimer, stunOnKnockback);
     }
 
     private Vector3 MoveTowardsPlayer(Vector3 intention)
@@ -68,5 +98,18 @@ public class EnemyAI : MonoBehaviour
     private float GetDistance(GameObject enemy, GameObject player)
     {
         return Vector3.Distance(enemy.transform.position, player.transform.position);
+    }
+
+
+    private void DecayVelocity()
+    {
+        if (knockbackVelocity.sqrMagnitude > 0.0001f)
+        {
+            knockbackVelocity = Vector3.Lerp(knockbackVelocity, Vector3.zero, knockbackDecay * Time.deltaTime);
+        }
+        else
+        {
+            knockbackVelocity = Vector3.zero;
+        }
     }
 }

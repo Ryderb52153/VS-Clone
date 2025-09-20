@@ -20,7 +20,7 @@ public class DefenseBallBehaviour : ProjectileBehaviour
 
         if (collision.TryGetComponent<ItakeDamage>(out ItakeDamage hitCollider))
         {
-            hitCollider.OnHit(damage);
+            hitCollider.OnHit(damage, transform.position);
         }
     }
 }

@@ -105,6 +105,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 2788267784407950172}
+  knockbackDecay: 6
+  stunOnKnockback: 0.05
 --- !u!114 &2788267784407950172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +123,7 @@ MonoBehaviour:
   enemyDamage: 1
   enemySpeed: 3
   experienceWorth: 50
+  knockbackResistance: 0
 --- !u!60 &5459223357974142984
 PolygonCollider2D:
   m_ObjectHideFlags: 0
