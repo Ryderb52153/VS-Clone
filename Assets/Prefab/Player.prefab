@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 9175280300313451088}
   - component: {fileID: 6322795703736534706}
   - component: {fileID: 4900423851306346303}
+  - component: {fileID: 2440852257540240154}
   m_Layer: 0
   m_Name: Ability Contoller
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MonoBehaviour:
   - {fileID: 2459488333449012248}
   - {fileID: 2760948984260872835}
   - {fileID: 4900423851306346303}
+  - {fileID: 2440852257540240154}
   defaultAbilities:
   - {fileID: 4759371844890286877}
   - {fileID: 9175280300313451088}
@@ -151,6 +153,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityData: {fileID: 11400000, guid: d4d9b66b6273da6439f0ae79c41def4e, type: 2}
+--- !u!114 &2440852257540240154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678063169897494063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5145369ad944204ea15aea6d4cf756e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityData: {fileID: 11400000, guid: 8c7fdb9dc798af64685c242680facf6a, type: 2}
 --- !u!1 &8715896379531492988
 GameObject:
   m_ObjectHideFlags: 0

@@ -10833,6 +10833,12 @@ MonoBehaviour:
   - tag: Treasure Chest
     prefab: {fileID: 3171838924977820737, guid: 52ee389bbe3425747a9452c553c06ef0, type: 3}
     size: 5
+  - tag: Ice Bolt
+    prefab: {fileID: 7062068464685373225, guid: f2ecfe7d7e8d38d4ea7d9040119085b4, type: 3}
+    size: 10
+  - tag: Ice Cloud
+    prefab: {fileID: 1112626323839538236, guid: b4d05c94505c62a4a9949ea06b608a62, type: 3}
+    size: 20
 --- !u!4 &1864801926
 Transform:
   m_ObjectHideFlags: 0

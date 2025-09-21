@@ -6,7 +6,6 @@ public class Projectile1 : Ability
     {
         base.Attack();
 
-        // Spawn Projectile from Pooler
         GameObject gameObject = ObjectPooler.Instance.SpawnFromPool("Projectile 1", transform.position, transform.rotation);
         SquareProjectileBehaviour square = gameObject.GetComponent<SquareProjectileBehaviour>();
 

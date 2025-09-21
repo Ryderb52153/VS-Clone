@@ -15,15 +15,19 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
 
     public int EnemyHealth => enemyHealth;
     public int EnemyDamage => enemyDamage;
-    public int EnemySpeed => enemySpeed;
+    public int EnemySpeed => currentSpeed;
     public float KnockbackResistance => knockbackResistance;
 
+    private int currentSpeed;
     private float currentEnemyHealth;
+    private float slowDuration;
+    private bool isSlowed;
     private Animator anim;
     public event Action<Vector3, float> KnockedBack;
 
     private void Awake()
     {
+        currentSpeed = enemySpeed;
         currentEnemyHealth = enemyHealth;
         anim = GetComponent<Animator>();
     }
@@ -41,6 +45,17 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
         {
             KnockedBack?.Invoke(sourceWorldPos, knockbackForce);
         }
+    }
+
+    public void Slow(int slowAmount, float duration)
+    {
+        if (isSlowed) return;
+
+        duration = Mathf.Max(0f, duration);
+        isSlowed = true;
+        slowDuration = duration;
+        currentSpeed = enemySpeed - slowAmount;
+        TimeTickSystem.OnTick += OnTick;
     }
 
     private void ApplyDamage(float damage)
@@ -78,6 +93,18 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
             ExperienceDrop experience = ObjectPooler.Instance.
                 SpawnFromPool("Experience", transform.position, transform.rotation).GetComponent<ExperienceDrop>();
             experience.ExperienceWorth = experienceWorth;
+        }
+    }
+
+    private void OnTick(object sender, TimeTickSystem.OnTickEventArgs e)
+    {
+        slowDuration--;
+
+        if (slowDuration <= 0)
+        {
+            isSlowed = false;
+            currentSpeed = enemySpeed;
+            TimeTickSystem.OnTick -= OnTick;
         }
     }
 

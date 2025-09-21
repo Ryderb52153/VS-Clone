@@ -11,7 +11,7 @@ public class DefenseBallBehaviour : ProjectileBehaviour
 
     private void FixedUpdate()
     {
-        transform.RotateAround(player.transform.localPosition, Vector3.forward ,speed);
+        transform.RotateAround(player.transform.localPosition, Vector3.forward , speed);
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision)

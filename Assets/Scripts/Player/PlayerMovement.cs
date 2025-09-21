@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private float nextDashTime = 0f;
 
     public int MoveSpeed { set; private get; }
-    public Vector2 RawInputMovement { set; private get; }
+    public Vector2 RawInputMovement { set;  get; }
 
     private void FixedUpdate()
     {
