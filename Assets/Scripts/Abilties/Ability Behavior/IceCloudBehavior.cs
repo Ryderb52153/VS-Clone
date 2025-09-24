@@ -12,7 +12,7 @@ public class IceCloudBehavior : MonoBehaviour
 
         if (collision.TryGetComponent<ItakeDamage>(out ItakeDamage hitCollider))
         {
-            hitCollider.Slow(1, 2f);
+            hitCollider.Slow(1, 1f);
         }
     }
 
