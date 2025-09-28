@@ -61,7 +61,7 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
     private void ApplyDamage(float damage)
     {
         currentEnemyHealth -= damage;
-        anim.SetTrigger("hit");
+        anim?.SetTrigger("hit");
 
         if (currentEnemyHealth <= 0)
         {
