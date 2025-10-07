@@ -7,10 +7,9 @@ public class CursorManager : MonoBehaviour
     [SerializeField] private List<CursorConfig> cursorConfigs = new();
     [SerializeField] private CursorType defaultType = CursorType.Default;
 
-    private  Dictionary<CursorType, CursorConfig> cursorMap = new();
+    private Dictionary<CursorType, CursorConfig> cursorMap = new();
 
     public void SetDefault() => Apply(CursorType.Default);
-    public void SetTarget() => Apply(CursorType.Target);
 
     private void Awake()
     {
@@ -58,8 +57,9 @@ public class CursorConfig
     public CursorMode cursorMode = CursorMode.Auto;
 }
 
+[System.Serializable]
 public enum CursorType
 {
     Default,
-    Target,
+    Vacuum,
 }

@@ -16,9 +16,11 @@ public abstract class Ability : MonoBehaviour
     public int GetCurrentLevel { get => currentLevel; }
     public int GetMaxLevel { get => AbilityData.GetMaxLevel; }
     public Sprite GetSprite { get => AbilityData.GetSprite; }
+    public CursorType GetCursor { get => AbilityData.GetCursorType; }
     public bool IsActive { get; set; } = false;
     public bool IsInputInteractable { get => currentStats.isInputInteractable; }
     public event Action<Ability, float> OnAbilityUsed;
+    public event Action<Ability> InteractReady;
 
     private void Awake()
     {
@@ -89,7 +91,7 @@ public abstract class Ability : MonoBehaviour
         if (currentStats.attackInterval > 1)
             StartCoroutine(AttackIntervalCoroutine());
         else if (currentStats.attackInterval == 1)
-            Attack();
+            UseAbility();
 
         PutAbilityOnCooldown();
     }
@@ -104,14 +106,19 @@ public abstract class Ability : MonoBehaviour
     {
         for (int i = 0; i < currentStats.attackInterval; i++)
         {
-            Attack();
+            UseAbility();
             yield return new WaitForSeconds(.1f);
         }
     }
 
-    protected virtual void Attack()
+    protected virtual void UseAbility()
     {
 
+    }
+
+    protected virtual void InteractAvailable()
+    {
+        InteractReady.Invoke(this);
     }
 
     private void OnDestroy()

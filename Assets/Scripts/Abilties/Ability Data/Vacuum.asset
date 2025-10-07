@@ -26,6 +26,7 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 1
+    cursor: 1
   LevelUpStats:
   - nameText: Vacuum 2
     descriptionText: Bigger Radius + speed
@@ -38,6 +39,7 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 1
+    cursor: 0
   - nameText: Vacuum 3
     descriptionText: Bigger Radius
     moveSpeed: 0
@@ -49,6 +51,7 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 1
+    cursor: 0
   - nameText: Vacuum 4
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 0
@@ -60,6 +63,7 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 1
+    cursor: 0
   - nameText: Vacuum 5
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 0
@@ -71,6 +75,7 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 1
+    cursor: 0
   - nameText: Vacuum 6
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 0
@@ -82,6 +87,7 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 1
+    cursor: 0
   - nameText: Vacuum 7
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 0
@@ -93,6 +99,7 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 1
+    cursor: 0
   - nameText: Vacuum 8
     descriptionText: Mouse Click to pick up an area of pick ups
     moveSpeed: 0
@@ -104,3 +111,4 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 1
+    cursor: 0

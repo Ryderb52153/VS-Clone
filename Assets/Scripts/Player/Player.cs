@@ -13,10 +13,13 @@ public class Player : MonoBehaviour
     public PlayerCombat Combat { get { return combat; } }
     public AbilityController AbilityController { get { return abilityController; } }
 
+    private Ability leftClickAbility;
+
     private void Awake()
     {
         movement.MoveSpeed = Stats.MoveSpeed;
         combat.Stats = Stats;
+        abilityController.GetAbilityInteracts.AbilityAddedToQue += CheckLeftClick;
     }
 
     //Input System Events
@@ -30,9 +33,11 @@ public class Player : MonoBehaviour
     {
         if (GameManager.Instance.isPaused) { return; }
         if (!value.performed) { return; }
-        if (abilityController.GetInteractableAbility == null) { return; }
+        if (leftClickAbility == null) { return; }
 
-        abilityController.GetInteractableAbility.Interact();
+        leftClickAbility.Interact();
+        leftClickAbility = null;
+        CheckLeftClick();
     }
 
     public void OnDash(InputAction.CallbackContext ctx)
@@ -43,6 +48,19 @@ public class Player : MonoBehaviour
         Vector2 mouseScreen = Mouse.current.position.ReadValue();
         Vector2 mouseWorld = Camera.main.ScreenToWorldPoint(mouseScreen);
         movement.TryDashTowards(mouseWorld);
+    }
+
+    public void CheckLeftClick()
+    {
+        if (leftClickAbility == null)
+        {
+            leftClickAbility = abilityController.GetAbilityInteracts.GetNextAbilityInQue();
+
+            if (leftClickAbility != null)
+            {
+                GameManager.Instance.ChangeCursor(leftClickAbility.GetCursor);
+            }
+        }
     }
 }
 

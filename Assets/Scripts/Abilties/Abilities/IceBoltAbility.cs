@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class IceBoltAbility : Ability
 {
-    protected override void Attack()
+    protected override void UseAbility()
     {
-        base.Attack();
+        base.UseAbility();
 
         GameObject gameObject = ObjectPooler.Instance.SpawnFromPool("Ice Bolt", transform.position, transform.rotation);
         IceBoltProjectileBehaviour iceBolt = gameObject.GetComponent<IceBoltProjectileBehaviour>();

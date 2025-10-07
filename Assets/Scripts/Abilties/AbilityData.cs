@@ -12,6 +12,7 @@ public class AbilityData : ScriptableObject
     public Stats GetBaseStats => baseStats;
     public int GetMaxLevel { get { return maxLevel; } } 
     public Sprite GetSprite { get { return abilitySprite; } }
+    public CursorType GetCursorType { get { return baseStats.cursor; } }
 
     public Stats GetLevelData(int level)
     {
@@ -41,6 +42,7 @@ public struct Stats
     public int healingAmount;
     public bool isPassive;
     public bool isInputInteractable;
+    public CursorType cursor;
 
 
     public static Stats operator +(Stats statsOne, Stats otherStats)

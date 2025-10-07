@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class DefenseBall : Ability
 {
-    protected override void Attack()
+    protected override void UseAbility()
     {
-        base.Attack();
+        base.UseAbility();
 
         Vector3 spawnPos = new Vector3(transform.position.x + 3, transform.position.y, transform.position.z);
         GameObject gameObject = ObjectPooler.Instance.SpawnFromPool("Defense Ball", spawnPos, transform.rotation);

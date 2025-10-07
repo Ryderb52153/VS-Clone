@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Projectile1 : Ability
 {
-    protected override void Attack()
+    protected override void UseAbility()
     {
-        base.Attack();
+        base.UseAbility();
 
         GameObject gameObject = ObjectPooler.Instance.SpawnFromPool("Projectile 1", transform.position, transform.rotation);
         SquareProjectileBehaviour square = gameObject.GetComponent<SquareProjectileBehaviour>();

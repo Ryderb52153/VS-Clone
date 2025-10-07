@@ -7,13 +7,13 @@ public class AbilityController : MonoBehaviour
 {
     [SerializeField] private List<Ability> abilities;
     [SerializeField] private List<Ability> defaultAbilities;
+    [SerializeField] private AbilityInteracts interacts;
 
     public Ability GetStartingAbility => abilities[0];
-    public Ability GetInteractableAbility => interactableAbility;
+    public AbilityInteracts GetAbilityInteracts => interacts;
     public event Action<Ability> OnAbilityChanged;
 
     private System.Random rng = new System.Random();
-    private Ability interactableAbility;
 
     private void Start()
     {
@@ -66,16 +66,14 @@ public class AbilityController : MonoBehaviour
 
     public void ActivateAbility(Ability ability)
     {
-        if (!ability.IsActive)
-        {
-            ability.ActivateAbility();
-            OnAbilityChanged?.Invoke(ability);
+        if (ability.IsActive) { return; }
 
-            if (ability.IsInputInteractable)
-            {
-                interactableAbility = ability;
-                GameManager.Instance.ChangeCursor(CursorType.Target);
-            }
+        ability.ActivateAbility();
+        OnAbilityChanged?.Invoke(ability);
+
+        if (ability.IsInputInteractable)
+        {
+            interacts.AddAbility(ability);
         }
     }
 

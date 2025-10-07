@@ -19,7 +19,7 @@ public class VacuumPU : Ability
     {
         if(isReady)
         {
-            Attack();
+            UseAbility();
         }
     }
 
@@ -32,11 +32,12 @@ public class VacuumPU : Ability
         if (cooldownRemaining < 0)
         {
             isReady = true;
-            GameManager.Instance.ChangeCursor(CursorType.Target);
+            InteractAvailable();
+            //GameManager.Instance.ChangeCursor(CursorType.Target);
         }
     }
 
-    protected override void Attack()
+    protected override void UseAbility()
     {
         Vector3 mousePosition = myCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
