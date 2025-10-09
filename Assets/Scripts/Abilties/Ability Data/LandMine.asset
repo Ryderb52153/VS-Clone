@@ -10,37 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e04d6f1a846cb014bbfb607783607997, type: 3}
-  m_Name: IceBolt
+  m_Name: LandMine
   m_EditorClassIdentifier: 
-  abilitySprite: {fileID: 0}
+  abilitySprite: {fileID: -6173024527179017946, guid: 0cd334818e92fc0448d64054674e78c0, type: 3}
   maxLevel: 8
   baseStats:
-    nameText: Ice Bolt
-    descriptionText: Frost Projectile Attack
-    moveSpeed: 3.5
-    cooldown: 3.5
-    damage: 2
+    nameText: Land Mine
+    descriptionText: Mouse Click to drop a bomb.
+    moveSpeed: 0
+    cooldown: 10
+    damage: 8
     damageVariance: 3
-    lifeSpan: 5
-    attackInterval: 1
+    lifeSpan: 1
+    attackInterval: 0
     healingAmount: 0
     isPassive: 0
-    isInputInteractable: 0
-    cursor: 0
+    isInputInteractable: 1
+    cursor: 2
   LevelUpStats:
-  - nameText: 'Ice Bolt 2 '
-    descriptionText: +Damage - CD
-    moveSpeed: 0
-    cooldown: -0.5
-    damage: 1
-    damageVariance: 0
-    lifeSpan: 0
-    attackInterval: 0
-    healingAmount: 0
-    isPassive: 0
-    isInputInteractable: 0
-    cursor: 0
-  - nameText: 'Ice Bolt 3 '
+  - nameText: 
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -52,7 +40,7 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: 'Ice Bolt 4 '
+  - nameText: 
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -64,7 +52,7 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: Ice Bolt 5
+  - nameText: 
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -76,7 +64,7 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: Ice Bolt 6
+  - nameText: 
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -88,7 +76,7 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: Ice Bolt 7
+  - nameText: 
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -100,7 +88,19 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: Ice Bolt 8
+  - nameText: 
+    descriptionText: 
+    moveSpeed: 0
+    cooldown: 0
+    damage: 0
+    damageVariance: 0
+    lifeSpan: 0
+    attackInterval: 0
+    healingAmount: 0
+    isPassive: 0
+    isInputInteractable: 0
+    cursor: 0
+  - nameText: 
     descriptionText: 
     moveSpeed: 0
     cooldown: 0

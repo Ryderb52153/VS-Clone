@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class VacuumPU : Ability
+public class LandMineAbility : Ability
 {
     private bool isReady = true;
     private Camera myCamera;
@@ -17,7 +17,7 @@ public class VacuumPU : Ability
 
     public override void Interact()
     {
-        if(isReady)
+        if (isReady)
         {
             UseAbility();
         }
@@ -36,14 +36,17 @@ public class VacuumPU : Ability
         }
     }
 
+
     protected override void UseAbility()
     {
         Vector3 mousePosition = myCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
-        VacuumBehaviour vacuumBehaviour = 
-            ObjectPooler.Instance.SpawnFromPool("Vacuum Ability", mousePosition, transform.rotation).GetComponent<VacuumBehaviour>();
 
-        vacuumBehaviour.SetVacuumDetails(currentStats);
+
+        //VacuumBehaviour vacuumBehaviour =
+            //ObjectPooler.Instance.SpawnFromPool("Vacuum Ability", mousePosition, transform.rotation).GetComponent<VacuumBehaviour>();
+
+        //vacuumBehaviour.SetVacuumDetails(currentStats);
         isReady = false;
         GameManager.Instance.ChangeCursor(CursorType.Default);
         PutAbilityOnCooldown();

@@ -62,4 +62,5 @@ public enum CursorType
 {
     Default,
     Vacuum,
+    LandMine,
 }
