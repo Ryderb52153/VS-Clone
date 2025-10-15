@@ -447,7 +447,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Snow Cloud 1_0: -1211872466538476032
+      Snow Cloud 1_1: 2319937089192895676
+      Snow Cloud 1_10: 6047909992542112455
+      Snow Cloud 1_11: -8206453619342358298
+      Snow Cloud 1_12: -7094780263948723081
+      Snow Cloud 1_2: -8180858912706518127
+      Snow Cloud 1_3: -3512209989492088291
+      Snow Cloud 1_4: -7339379123418974776
+      Snow Cloud 1_5: -3654978279168854887
+      Snow Cloud 1_6: 1961982754828311918
+      Snow Cloud 1_7: -5500561017756086198
+      Snow Cloud 1_8: -6173024527179017946
+      Snow Cloud 1_9: -6904942015939684091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

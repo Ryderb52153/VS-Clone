@@ -43,10 +43,10 @@ public class LandMineAbility : Ability
         mousePosition.z = 0;
 
 
-        //VacuumBehaviour vacuumBehaviour =
-            //ObjectPooler.Instance.SpawnFromPool("Vacuum Ability", mousePosition, transform.rotation).GetComponent<VacuumBehaviour>();
+        LandMineBehaviour landMineBehaviour =
+            ObjectPooler.Instance.SpawnFromPool("Land Mine Ability", mousePosition, transform.rotation).GetComponent<LandMineBehaviour>();
 
-        //vacuumBehaviour.SetVacuumDetails(currentStats);
+        landMineBehaviour.SetLandMine(currentStats);
         isReady = false;
         GameManager.Instance.ChangeCursor(CursorType.Default);
         PutAbilityOnCooldown();

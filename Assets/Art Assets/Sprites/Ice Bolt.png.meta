@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ice Bolt_0: -3180272249624998956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

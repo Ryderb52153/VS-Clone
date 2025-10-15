@@ -45,7 +45,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -78,7 +78,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      crosshair145 1_0: 2628378444897590106
+      crosshair145 1_1: -5777380809452016309
+      crosshair145 1_2: 1953246644506807983
+      crosshair145 1_3: 4818422223148679014
+      crosshair145 1_4: 2895722212991460851
+      crosshair145 1_5: -4547391801089170338
+      crosshair145 1_6: -4117766800263195258
+      crosshair145 1_7: -2205877514133103665
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
