@@ -35,6 +35,7 @@ public class LandMineBehaviour : MonoBehaviour
         if (collision.CompareTag("Enemy")) 
         {
             Explode();
+            ObjectPooler.Instance.SpawnFromPool("Explosion FX", transform.position, transform.rotation);
         }
     }
 
