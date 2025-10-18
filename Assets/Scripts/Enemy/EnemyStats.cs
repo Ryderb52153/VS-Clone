@@ -5,7 +5,7 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
 {
     [SerializeField] private int enemyHealth = 5;
     [SerializeField] private int enemyDamage = 10;
-    [SerializeField] private int enemySpeed = 2;
+    [SerializeField] private float enemySpeed = 2;
     [SerializeField] private int experienceWorth = 50;
 
     [Header("Defense")]
@@ -15,10 +15,10 @@ public class EnemyStats : MonoBehaviour, ItakeDamage
 
     public int EnemyHealth => enemyHealth;
     public int EnemyDamage => enemyDamage;
-    public int EnemySpeed => currentSpeed;
+    public float EnemySpeed => currentSpeed;
     public float KnockbackResistance => knockbackResistance;
 
-    private int currentSpeed;
+    private float currentSpeed;
     private float currentEnemyHealth;
     private float slowDuration;
     private bool isSlowed;

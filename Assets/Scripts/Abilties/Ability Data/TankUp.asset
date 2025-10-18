@@ -25,8 +25,10 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 30
     isPassive: 1
+    isInputInteractable: 0
+    cursor: 0
   LevelUpStats:
-  - nameText: Tank Up Level 2
+  - nameText: Tank Up  2
     descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
@@ -36,7 +38,9 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 1
-  - nameText: Tank Up Level 3
+    isInputInteractable: 0
+    cursor: 0
+  - nameText: Tank Up  3
     descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
@@ -46,7 +50,9 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 1
-  - nameText: Tank Up Level 4
+    isInputInteractable: 0
+    cursor: 0
+  - nameText: Tank Up  4
     descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
@@ -56,7 +62,9 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 1
-  - nameText: Tank Up Level 5
+    isInputInteractable: 0
+    cursor: 0
+  - nameText: Tank Up  5
     descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
@@ -66,7 +74,9 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 1
-  - nameText: Tank Up Level 6
+    isInputInteractable: 0
+    cursor: 0
+  - nameText: Tank Up  6
     descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
@@ -76,7 +86,9 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 1
-  - nameText: Tank Up Level 7
+    isInputInteractable: 0
+    cursor: 0
+  - nameText: Tank Up  7
     descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
@@ -86,7 +98,9 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 1
-  - nameText: Tank Up Final
+    isInputInteractable: 0
+    cursor: 0
+  - nameText: Tank Up 8
     descriptionText: + 30 Health
     moveSpeed: 0
     cooldown: 0
@@ -96,3 +110,5 @@ MonoBehaviour:
     attackInterval: 0
     healingAmount: 0
     isPassive: 1
+    isInputInteractable: 0
+    cursor: 0

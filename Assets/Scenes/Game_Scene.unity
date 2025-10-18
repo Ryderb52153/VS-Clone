@@ -5680,23 +5680,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPhases:
   - spawnCooldown: 3
+    initialWave: 5
     enemyTypes:
     - Enemy Triangle
   - spawnCooldown: 2
+    initialWave: 5
     enemyTypes:
     - Enemy Triangle
     - Enemy Tank
   - spawnCooldown: 2
+    initialWave: 10
     enemyTypes:
     - Enemy Triangle
     - Enemy Tank
     - Enemy Eye
   - spawnCooldown: 2
+    initialWave: 10
     enemyTypes:
     - Enemy Triangle
     - Enemy Triangle
     - Enemy Eye
   - spawnCooldown: 1
+    initialWave: 20
     enemyTypes:
     - Enemy Triangle
     - Enemy Eye

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2788267784407950172, guid: d0f0741ee899eb4479dce533601b535f, type: 3}
+      propertyPath: enemySpeed
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6359629506039207719, guid: d0f0741ee899eb4479dce533601b535f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8577565923081341760, guid: d0f0741ee899eb4479dce533601b535f, type: 3}
       propertyPath: m_Name
-      value: Default_Enemy
+      value: Enemy_Triangle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

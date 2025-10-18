@@ -28,7 +28,7 @@ MonoBehaviour:
     isInputInteractable: 1
     cursor: 2
   LevelUpStats:
-  - nameText: 
+  - nameText: Land Mine 2
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: 
+  - nameText: 'Land Mine 3 '
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: 
+  - nameText: Land Mine 4
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: 
+  - nameText: Land Mine 5
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: 
+  - nameText: Land Mine 6
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: 
+  - nameText: 'Land Mine 7 '
     descriptionText: 
     moveSpeed: 0
     cooldown: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
     isPassive: 0
     isInputInteractable: 0
     cursor: 0
-  - nameText: 
+  - nameText: Land Mine 8
     descriptionText: 
     moveSpeed: 0
     cooldown: 0

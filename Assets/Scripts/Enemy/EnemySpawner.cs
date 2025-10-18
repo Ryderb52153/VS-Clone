@@ -15,6 +15,15 @@ public class EnemySpawner : MonoBehaviour
     {
         GameManager.Instance.endGameDelegate = SpawnEndGame;
         GameManager.Instance.Player.Stats.LevelUp += IncreasePhase;
+        SpawnInitialWave();
+    }
+
+    private void SpawnInitialWave()
+    {
+        for (int i = 0; i < CurrentPhase.initialWave; i++)
+        {
+            SpawnEnemy();
+        }
     }
 
     private void TimeTick(object sender, TimeTickSystem.OnTickEventArgs e)
@@ -31,6 +40,7 @@ public class EnemySpawner : MonoBehaviour
         if (currentPhaseIndex > spawnPhases.Count - 2) { return; }
         currentPhaseIndex++;
         cooldownRemaining = 0;
+        SpawnInitialWave();
     }
 
     private void SpawnEnemy()
@@ -39,7 +49,8 @@ public class EnemySpawner : MonoBehaviour
         string[] availableEnemies = CurrentPhase.enemyTypes;
 
         int randomEnemy = Random.Range(0, availableEnemies.Length);
-        GameObject enemy = ObjectPooler.Instance.SpawnFromPool(availableEnemies[randomEnemy], new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
+        GameObject enemy = ObjectPooler.Instance.SpawnFromPool(availableEnemies[randomEnemy], 
+                            new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
         GameManager.Instance.ActiveEnemies.Add(enemy);
     }
 
@@ -76,5 +87,6 @@ public class EnemySpawner : MonoBehaviour
 public class SpawnPhase
 {
     public int spawnCooldown;
+    public int initialWave;
     public string[] enemyTypes;
 }

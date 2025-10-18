@@ -26,8 +26,9 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
+    cursor: 0
   LevelUpStats:
-  - nameText: Defense Ball Level 2
+  - nameText: Defense Ball  2
     descriptionText: +Ball Speed
     moveSpeed: 2
     cooldown: 0
@@ -38,7 +39,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Defense Ball Level 3
+    cursor: 0
+  - nameText: Defense Ball  3
     descriptionText: -Cooldown
     moveSpeed: 0
     cooldown: -5
@@ -49,7 +51,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Defense Ball Level 4
+    cursor: 0
+  - nameText: Defense Ball  4
     descriptionText: +Speed
     moveSpeed: 2
     cooldown: 0
@@ -60,7 +63,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Defense Ball Level 5
+    cursor: 0
+  - nameText: Defense Ball  5
     descriptionText: +Speed and Damage
     moveSpeed: 2
     cooldown: 0
@@ -71,7 +75,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Defense Ball Level 6
+    cursor: 0
+  - nameText: Defense Ball  6
     descriptionText: +Speed
     moveSpeed: 3
     cooldown: 0
@@ -82,7 +87,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Defense Ball Level 7
+    cursor: 0
+  - nameText: Defense Ball  7
     descriptionText: +Speed and Damage
     moveSpeed: 2
     cooldown: 0
@@ -93,7 +99,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Defense Ball Level 8
+    cursor: 0
+  - nameText: Defense Ball  8
     descriptionText: -Cooldown and Life Span
     moveSpeed: 0
     cooldown: 0
@@ -104,3 +111,4 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
+    cursor: 0

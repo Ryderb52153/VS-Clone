@@ -26,8 +26,9 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
+    cursor: 0
   LevelUpStats:
-  - nameText: Bullet Level 2
+  - nameText: Bullet  2
     descriptionText: +Damage and -Cooldown
     moveSpeed: 0
     cooldown: -0.5
@@ -38,7 +39,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Bullet Level 3
+    cursor: 0
+  - nameText: Bullet  3
     descriptionText: +Damage and -Cooldown and more shots
     moveSpeed: 1
     cooldown: -0.5
@@ -49,7 +51,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Bullet Level 4
+    cursor: 0
+  - nameText: Bullet  4
     descriptionText: +Damage and -Cooldown and more shots
     moveSpeed: 1
     cooldown: -0.5
@@ -60,7 +63,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Bullet Level 5
+    cursor: 0
+  - nameText: Bullet  5
     descriptionText: +Damage and -Cooldown
     moveSpeed: 0
     cooldown: -0.5
@@ -71,7 +75,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Bullet Level 6
+    cursor: 0
+  - nameText: Bullet  6
     descriptionText: +Damage and -Cooldown
     moveSpeed: 2
     cooldown: -0.5
@@ -82,7 +87,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Bullet Level 7
+    cursor: 0
+  - nameText: Bullet  7
     descriptionText: '+Damage '
     moveSpeed: 1
     cooldown: 0
@@ -93,7 +99,8 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
-  - nameText: Bullet Level 8
+    cursor: 0
+  - nameText: Bullet  8
     descriptionText: '+Damage '
     moveSpeed: 1
     cooldown: 0
@@ -104,3 +111,4 @@ MonoBehaviour:
     healingAmount: 0
     isPassive: 0
     isInputInteractable: 0
+    cursor: 0
